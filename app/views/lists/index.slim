@@ -1,0 +1,19 @@
+.row style="width: 100vw"
+  .col-md-3.bg-light.pe-0 style="height: 100vh"
+    .p-3.d-flex.flex-column.flex-grow.h-100
+      .d-flex.justify-content-between.align-items-top.pb-4.px-2
+        h4 Lexorank Demo Application
+        = link_to 'https://www.github.com/richardboehme/lexorank', class: 'text-dark', target: :_blank do
+          = icon(:github)
+      h6.px-2.fw-lighter Lists
+      ul.nav.flex-column.flex-fill style="overflow-y: auto"
+        = turbo_frame_tag(:lists, target: :current_list, data: { controller: 'lists--list', action: 'lists--details:listAppeared@window->lists--list#setActive' }) do
+          = render(partial: 'list', collection: @lists)
+      .px-3.pt-3
+        = form_with(model: List.new, data: { controller: 'reset-form', action: 'turbo:submit-end->reset-form#reset' }) do |f|
+          .input-group
+            = f.text_field :name, class: 'form-control', placeholder: 'New List'
+            = f.button(class: 'btn btn-outline-success') do
+              = icon(:plus)
+  .col-md-9
+    = render partial: 'load_show', locals: { list: @lists.first }

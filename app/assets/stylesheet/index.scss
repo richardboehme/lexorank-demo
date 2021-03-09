@@ -1,0 +1,16 @@
+@import "~bootstrap/scss/bootstrap";
+
+.moveable {
+  cursor: move;
+}
+
+.nav .nav-link {
+  &.active {
+    background-color: $gray-200;
+    color: $purple-500 !important;
+  }
+
+  &:hover {
+    background-color: $gray-300;
+  }
+}

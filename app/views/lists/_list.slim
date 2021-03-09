@@ -1,0 +1,11 @@
+li.nav-item data-update-position-path=update_position_list_path(list)
+  = link_to( \
+      list_path(list),
+      class: 'nav-link d-flex justify-content-between align-items-center text-dark fw-bolder moveable',
+      id: dom_id(list),
+      data: { lists__list_target: 'link' } \
+  ) do
+    = list.name
+    span.badge.bg-light.text-dark.rank-container
+      | Rank:
+      =< list.rank

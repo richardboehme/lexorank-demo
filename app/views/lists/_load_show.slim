@@ -1,0 +1,4 @@
+- if list.present?
+  = turbo_frame_tag(:current_list, src: list_path(list))
+- else
+  = turbo_frame_tag(:current_list)

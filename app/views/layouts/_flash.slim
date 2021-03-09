@@ -1,0 +1,14 @@
+- unless flash.empty?
+  - flash.each do |type, messages|
+    - messages.each do |message|
+      .toast aria-atomic="true" aria-live="assertive" role="alert" data-controller="flash-message"
+        .toast-header
+          = flash_to_icon(type)
+          strong.me-auto.ms-1 = message[:title]
+          button.btn-close aria-label="Close" data-bs-dismiss="toast" type="button"
+        - if message[:message].present?
+          .toast-body
+            - if message[:message].respond_to?(:join)
+              = message[:message].join('\n')
+            - else
+              = message[:message]
