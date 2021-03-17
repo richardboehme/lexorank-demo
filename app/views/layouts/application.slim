@@ -1,7 +1,21 @@
 doctype html
 html
   head
-    title LexorankSampleApp
+    title Lexorank Demo | Store user-defined order of your models by utilizing lexicographical sorting
+    meta name="description" content="The lexorank gem allows you to store the order of your Rails or ActiveRecord models. This demo page demonstrates how one could use this."
+    meta name="robots" content="index, follow"
+    meta charset="UTF-8"
+
+    link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"
+    link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"
+    link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"
+    link rel="manifest" href="/site.webmanifest"
+    link rel="mask-icon" href="/safari-pinned-tab.svg" color="#3e3e3e"
+    meta name="apple-mobile-web-app-title" content="Lexorank Demo"
+    meta name="application-name" content="Lexorank Demo"
+    meta name="msapplication-TileColor" content="#f1f1f1"
+    meta name="theme-color" content="#f1f1f1"
+
     = csrf_meta_tags
     = csp_meta_tag
 
@@ -9,7 +23,6 @@ html
 
     = stylesheet_pack_tag'application', media: 'all'
     = javascript_pack_tag 'application'
-  head
 
   body
     .toast-container.top-0.end-0.p-3.position-fixed#flash_messages style="z-index: 10"
