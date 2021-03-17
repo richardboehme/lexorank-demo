@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2021_03_06_205707) do
 
-  create_table "items", charset: "utf8mb4", force: :cascade do |t|
+  create_table "items", charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
     t.string "name"
     t.bigint "list_id"
     t.datetime "created_at", precision: 6, null: false
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2021_03_06_205707) do
     t.index ["rank", "list_id"], name: "index_items_on_rank_and_list_id", unique: true
   end
 
-  create_table "lists", charset: "utf8mb4", force: :cascade do |t|
+  create_table "lists", charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
