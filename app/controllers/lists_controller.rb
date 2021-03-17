@@ -13,6 +13,7 @@ class ListsController < ApplicationController
   def create
     list = List.new(name: params[:list][:name], session: @session)
     list.move_to(@session.lists.ranked.count)
+
     if list.save
       flash.now[:success] = [{ title: 'List successfully created!' }]
     else

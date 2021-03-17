@@ -1,40 +1,47 @@
-.row style="width: 100vw"
-  .col-md-3.bg-light.pe-0 style="height: 100vh"
-    .p-3.d-flex.flex-column.flex-grow.h-100
-      .d-flex.justify-content-between.align-items-top.pb-4.px-2
-        h4 Lexorank Demo Application
-        .d-flex
-          = link_to( \
-              'https://www.github.com/richardboehme/lexorank-demo',
-              class: 'link-dark d-flex flex-column align-items-center',
-              data: { \
-                controller: 'tooltip',
-                bs_placement: 'bottom' \
-              },
-              title: 'Demo Source Code',
-              target: :_blank \
-          ) do
-            = icon(:code_slash)
-          = link_to(\
-              'https://www.github.com/richardboehme/lexorank',
-              class: 'link-dark ms-3 d-flex flex-column align-items-center',
-              data: { \
-                controller: 'tooltip',
-                bs_placement: 'bottom' \
-              },
-              title: 'Gem Source',
-              target: :_blank \
-          ) do
-            = icon(:github)
-      h6.px-2.fw-lighter Lists
-      ul.nav.flex-column.flex-fill style="overflow-y: auto"
-        = turbo_frame_tag(:lists, target: :current_list, data: { controller: 'lists--list', action: 'lists--details:listAppeared@window->lists--list#setActive' }) do
-          = render(partial: 'list', collection: @lists)
-      .px-3.pt-3
-        = form_with(model: List.new, data: { controller: 'reset-form', action: 'turbo:submit-end->reset-form#reset' }) do |f|
-          .input-group
-            = f.text_field :name, class: 'form-control', placeholder: 'New List'
-            = f.button(class: 'btn btn-outline-success') do
-              = icon(:plus)
-  .col-md-9
+.row.m-0
+  .col-lg-3.col-md-4.bg-light.sidebar
+    .navbar-expand-md.h-100
+      .p-3.h-100.flex-column.d-flex
+        .row.px-2
+          .col-md-8.d-flex.justify-content-between
+            h4 Lexorank Demo Application
+            button.navbar-toggler type="button" data-bs-toggle="collapse" data-bs-target="#navBar" aria-controls="navBar" aria-expanded="false" aria-label="Toggle navigation"
+              = icon(:list)
+          .col-md-4.d-flex.justify-content-md-end.align-items-top.pt-2.pt-md-0
+            = link_to( \
+                'https://www.github.com/richardboehme/lexorank-demo',
+                class: 'link-dark d-flex align-items-center text-decoration-none',
+                data: { \
+                  controller: 'tooltip',
+                  bs_placement: 'bottom' \
+                },
+                title: 'Demo Source Code',
+                target: :_blank \
+            ) do
+              = icon(:code_slash)
+              span.d-md-none.ms-2.text-decoration-none Demo Source
+            = link_to(\
+                'https://www.github.com/richardboehme/lexorank',
+                class: 'link-dark ms-3 d-flex align-items-center text-decoration-none',
+                data: { \
+                  controller: 'tooltip',
+                  bs_placement: 'bottom' \
+                },
+                title: 'Gem Source',
+                target: :_blank \
+            ) do
+              = icon(:github)
+              span.d-md-none.ms-2 Gem Source
+        .collapse.navbar-collapse.overflow-auto.mt-4 id="navBar" class=('show' if @lists.size == 0)
+          h6.px-2.fw-lighter Lists
+          ul.nav.flex-column.flex-fill style="overflow-y: auto"
+            = turbo_frame_tag(:lists, target: :current_list, data: { controller: 'lists--list', action: 'lists--details:listAppeared@window->lists--list#setActive' }) do
+              = render(partial: 'list', collection: @lists)
+          .px-xxl-3.pt-3
+            = form_with(model: List.new, data: { controller: 'reset-form', action: 'turbo:submit-end->reset-form#reset' }) do |f|
+              .input-group
+                = f.text_field :name, class: 'form-control', placeholder: 'New List'
+                = f.button(class: 'btn btn-outline-success') do
+                  = icon(:plus)
+  .col-lg-9.col-md-8
     = render partial: 'load_show', locals: { list: @lists.first }

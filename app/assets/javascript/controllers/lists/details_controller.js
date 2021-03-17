@@ -13,6 +13,9 @@ export default class extends Controller {
     this.dispatch('listAppeared', { id: this.idValue })
 
     Sortable.create(this.itemListTarget, {
+      delay: 100,
+      delayOnTouchOnly: true,
+      chosenClass: 'shadow',
       onEnd: this.updatePosition
     });
   }
@@ -22,7 +25,7 @@ export default class extends Controller {
     fetch(url, {
       method: 'PATCH',
       credentials: 'same-origin',
-      headers: { 'X-CSRF_Token': Rails.csrfToken() }
+      headers: { 'X-CSRF-Token': Rails.csrfToken() }
     })
     .then(response => response.json())
     .then(data => {

@@ -1,9 +1,9 @@
 = turbo_frame_tag(:current_list) do
-  .d-flex.flex-column.p-3.vh-100 data-controller="lists--details" data-lists--details-id-value=@list.id
+  .d-flex.flex-column.p-3.vh-md-100 data-controller="lists--details" data-lists--details-id-value=@list.id
     .d-flex.justify-content-between.align-items-center
-      h3 = @list.name
+      h3.text-break = @list.name
       = link_to(list_path(@list), method: :delete, class: 'btn btn-danger d-flex') do
         = icon(:trash, width: 15, height: 15, class: 'me-1 align-self-center')
         | Delete
-    .d-flex.flex-column.pt-5.overflow-auto.flex-fill
+    .d-flex.flex-md-column.flex-column-reverse.flex-fill.overflow-auto
       = render partial: 'items/list', locals: { items: @items, list: @list }

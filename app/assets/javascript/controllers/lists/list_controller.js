@@ -1,6 +1,7 @@
 import { Controller } from "stimulus"
 import Sortable from 'sortablejs';
 import Rails from '@rails/ujs'
+import { Collapse } from "bootstrap";
 
 export default class extends Controller {
 
@@ -8,15 +9,20 @@ export default class extends Controller {
 
   connect() {
     const sortable = Sortable.create(this.element, {
+      delay: 100,
+      delayOnTouchOnly: true,
       onEnd: this.updatePosition
     });
   }
 
   setActive(e) {
-    this.linkTargets.forEach(el => {
+    this.linkTargets.forEach((el, index) => {
       if(el.id === `list_${e.detail.id}`) {
         el.classList.add('active');
-        el.scrollIntoView();
+        // if a new list was added (at the end of the list) we want to scroll to it
+        if(index === this.linkTargets.length - 1) {
+          el.scrollIntoView();
+        }
       } else {
         el.classList.remove('active');
       }
@@ -28,7 +34,7 @@ export default class extends Controller {
     fetch(url, {
       method: 'PATCH',
       credentials: 'same-origin',
-      headers: { 'X-CSRF_Token': Rails.csrfToken() }
+      headers: { 'X-CSRF-Token': Rails.csrfToken() }
     })
     .then(response => response.json())
     .then(data => {

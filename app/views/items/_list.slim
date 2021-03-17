@@ -1,8 +1,8 @@
-#items.list-group.flex-fill.overflow-auto.mb-3 data-lists--details-target="itemList"
+#items.list-group.flex-fill.overflow-auto.mb-3.mt-5 data-lists--details-target="itemList"
   = render(partial: 'items/item', collection: items)
-.pt-3
+.pt-3.col-xxl-8
   = form_with(model: Item.new, url: list_items_path(list), data: { controller: 'reset-form', action: 'turbo:submit-end->reset-form#reset' }) do |f|
-    .input-group.w-75
+    .input-group
       = f.text_field :name, class: 'form-control', placeholder: 'New Item'
       = f.button(class: 'btn btn-outline-success') do
         = icon(:plus)
