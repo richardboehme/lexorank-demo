@@ -5,5 +5,5 @@
       = link_to(list_path(@list), method: :delete, class: 'btn btn-danger d-flex') do
         = icon(:trash, width: 15, height: 15, class: 'me-1 align-self-center')
         | Delete
-    .d-flex.flex-md-column.flex-column-reverse.flex-fill.overflow-auto
+    .d-flex.flex-md-column.flex-column-reverse.flex-fill.overflow-auto.fix-shadow-overlay
       = render partial: 'items/list', locals: { items: @items, list: @list }

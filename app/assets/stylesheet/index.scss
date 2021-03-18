@@ -27,9 +27,9 @@
 }
 
 // some css magic to allow overflowing box shadows (espacially for form fields)
-.overflow-auto {
-  padding: 25px;
-  margin: -25px;
+.fix-shadow-overlay {
+  padding: 15px;
+  margin: -15px;
 }
 
 @media (max-width: map-get($grid-breakpoints, "md")) {

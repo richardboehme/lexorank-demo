@@ -32,12 +32,12 @@
             ) do
               = icon(:github)
               span.d-md-none.ms-2 Gem Source
-        .collapse.navbar-collapse.overflow-auto.mt-4 id="navBar" class=('show' if @lists.size == 0)
+        .collapse.navbar-collapse.mt-4.overflow-hidden.fix-shadow-overlay id="navBar" class=('show' if @lists.size == 0)
           h6.px-2.fw-lighter Lists
           ul.nav.flex-column.flex-fill style="overflow-y: auto"
             = turbo_frame_tag(:lists, target: :current_list, data: { controller: 'lists--list', action: 'lists--details:listAppeared@window->lists--list#setActive' }) do
               = render(partial: 'list', collection: @lists)
-          .px-xxl-3.pt-3
+          .pt-3
             = form_with(model: List.new, data: { controller: 'reset-form', action: 'turbo:submit-end->reset-form#reset' }) do |f|
               .input-group
                 = f.text_field :name, class: 'form-control', placeholder: 'New List'
