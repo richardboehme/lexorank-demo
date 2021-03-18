@@ -1,6 +1,16 @@
 class ApplicationController < ActionController::Base
   before_action :write_session
 
+  unless Rails.env.production?
+    before_action do
+      Prosopite.scan
+    end
+
+    after_action do
+      Prosopite.finish
+    end
+  end
+
   def respond_with_turbo_stream(fallback: nil, &block)
     respond_to do |format|
       format.turbo_stream do
@@ -17,6 +27,7 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  # We have to write something into the session to read from it
   def write_session
     session[:last_request] = Time.current
   end
