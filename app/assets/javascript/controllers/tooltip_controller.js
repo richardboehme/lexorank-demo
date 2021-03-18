@@ -1,5 +1,5 @@
 import { Controller } from "stimulus"
-import { Tooltip } from "bootstrap";
+import Tooltip from "bootstrap/js/dist/tooltip";
 
 export default class extends Controller {
   connect() {

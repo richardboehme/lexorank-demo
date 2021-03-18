@@ -1,5 +1,5 @@
 import { Controller } from "stimulus";
-import { Toast } from "bootstrap";
+import Toast from "bootstrap/js/dist/toast";
 
 export default class extends Controller {
 

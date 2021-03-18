@@ -1,5 +1,5 @@
 import { Controller } from "stimulus"
-import { useDispatch } from 'stimulus-use'
+import { useDispatch } from 'stimulus-use/dist/use-dispatch'
 import Sortable from 'sortablejs';
 import Rails from "@rails/ujs";
 

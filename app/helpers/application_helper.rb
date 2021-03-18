@@ -10,9 +10,7 @@ module ApplicationHelper
   end
 
   def icon(name, **options)
-    content_tag(:svg, class: 'bi', width: '25', height: '25', fill: 'currentColor', **options) do
-      tag.use 'xlink:href': "#{asset_pack_path('media/bootstrap-icons/bootstrap-icons.svg')}##{name.to_s.dasherize}"
-    end
+    inline_svg_pack_tag("media/icons/#{name.to_s.dasherize}.svg", height: 25, width: 25, **options)
   end
 
 end

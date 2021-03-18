@@ -1,7 +1,6 @@
 import { Controller } from "stimulus"
 import Sortable from 'sortablejs';
 import Rails from '@rails/ujs'
-import { Collapse } from "bootstrap";
 
 export default class extends Controller {
 

@@ -1,21 +1,19 @@
-// This file is automatically compiled by Webpack, along with any other files
-// present in this directory. You're encouraged to place your actual application logic in
-// a relevant structure within app/assets and only use these pack files to reference
-// that code so it'll be compiled.
+import Rails from "@rails/ujs"
+Rails.start()
 
-require("@rails/ujs").start()
-require("channels")
+import { Turbo } from "@hotwired/turbo-rails"
 
-import { Turbo, cable } from "@hotwired/turbo-rails"
+// Only import the plugins that we need to optimise bundle size
+import 'bootstrap/js/dist/collapse'
 
-import 'bootstrap'
-import 'bootstrap-icons/bootstrap-icons.svg'
+// Only import the icons that we need to optimise bundle size
+import 'bootstrap-icons/icons/plus.svg'
+import 'bootstrap-icons/icons/list.svg'
+import 'bootstrap-icons/icons/code-slash.svg'
+import 'bootstrap-icons/icons/github.svg'
+import 'bootstrap-icons/icons/exclamation-triangle.svg'
+import 'bootstrap-icons/icons/check.svg'
+import 'bootstrap-icons/icons/trash.svg'
 
 import '../stylesheet'
 import '../javascript/controllers'
-// Uncomment to copy all static images under ../images to the output folder and reference
-// them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
-// or the `imagePath` JavaScript helper below.
-//
-// const images = require.context('../images', true)
-// const imagePath = (name) => images(name, true)
