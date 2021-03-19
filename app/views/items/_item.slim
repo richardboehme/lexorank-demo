@@ -1,8 +1,8 @@
 .list-group-item.d-flex.justify-content-between.align-items-center.moveable data-update-position-path=update_position_list_item_path(item, list_id: item.list_id) id=dom_id(item)
   h4 = item.name
-  div
+  .d-flex.align-items-center
     span.badge.bg-light.text-dark.rank-container.me-3
       | Rank
       =< item.rank
-    = link_to list_item_path(item, list_id: item.list_id), method: :delete, class: 'btn btn-outline-success' do
+    = delete_button(list_item_path(item, list_id: item.list_id), button: { class: 'btn btn-outline-success' }) do
       = icon(:check)

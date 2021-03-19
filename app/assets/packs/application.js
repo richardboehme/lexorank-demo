@@ -14,6 +14,8 @@ import 'bootstrap-icons/icons/github.svg'
 import 'bootstrap-icons/icons/exclamation-triangle.svg'
 import 'bootstrap-icons/icons/check.svg'
 import 'bootstrap-icons/icons/trash.svg'
+import 'bootstrap-icons/icons/arrow-up.svg'
+import 'bootstrap-icons/icons/arrow-down.svg'
 
 import '../stylesheet'
 import '../javascript/controllers'

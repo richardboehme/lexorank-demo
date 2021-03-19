@@ -1,5 +1,4 @@
 class ItemsController < ApplicationController
-  before_action :set_session
   before_action :set_list
 
   def create
@@ -11,7 +10,7 @@ class ItemsController < ApplicationController
       flash.now[:danger] = item.errors.full_messages.map { |messages| { title: 'Error while creating a new item!', message: messages } }
     end
 
-    respond_with_turbo_stream(fallback: lists_path) do
+    respond_with_turbo_stream(fallback: list_path(@list)) do
       if item.persisted?
         turbo_stream.append(:items, item)
       end
@@ -34,11 +33,7 @@ class ItemsController < ApplicationController
   end
 
   def set_list
-    @list = @session.lists.find(params[:list_id].to_i)
-  end
-
-  def set_session
-    @session = Session.find_by!(session_id: session.id)
+    @list = @lists.find(params[:list_id].to_i)
   end
 
 end

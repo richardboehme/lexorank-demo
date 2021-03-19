@@ -1,18 +1,19 @@
 class ListsController < ApplicationController
-  before_action :set_session
 
   def index
-    @lists = @session.lists.ranked
   end
 
   def show
-    @list = @session.lists.find(params[:id])
+    @list = @lists.find(params[:id])
     @items = @list.items.ranked
+    unless turbo_frame_request?
+      @lists = @session.lists.ranked
+    end
   end
 
   def create
     list = List.new(name: params[:list][:name], session: @session)
-    list.move_to(@session.lists.ranked.count)
+    list.move_to(@lists.size)
 
     if list.save
       flash.now[:success] = [{ title: 'List successfully created!' }]
@@ -20,9 +21,10 @@ class ListsController < ApplicationController
       flash.now[:danger] = list.errors.full_messages.map { |messages| { title: 'Error while creating a new list!', message: messages } }
     end
 
-    respond_with_turbo_stream(fallback: lists_path) do
+    respond_with_turbo_stream(fallback: list_path(list)) do
       if list.persisted?
-        turbo_stream.append(:lists, list) + turbo_stream.replace(:current_list, partial: 'lists/load_show', locals: { list: list })
+        turbo_stream.append(:lists, partial: 'lists/list', locals: { list: list, list_counter: @lists.size }) +
+          turbo_stream.replace(:current_list, partial: 'lists/load_show', locals: { list: list })
       end
     end
   end
@@ -30,26 +32,25 @@ class ListsController < ApplicationController
   def update_position
     list = @session.lists.find(params[:id].to_i)
     list.move_to!(params[:position].to_i)
-    render json: { rank: list.rank }
-  end
-
-  def destroy
-    list = @session.lists.find(params[:id])
-    if list.destroy
-      new_list = @session.lists.ranked.find_by('rank > ?', list.rank)
-
-      unless new_list
-        new_list = @session.lists.ranked.last
-      end
-
-      respond_with_turbo_stream(fallback: lists_path) do
-        turbo_stream.remove(list) + turbo_stream.replace(:current_list, partial: 'lists/load_show', locals: { list: new_list })
-      end
+    respond_to do |format|
+      format.json { render json: { rank: list.rank } }
+      format.html { redirect_to list_path(list) }
     end
   end
 
-  def set_session
-    @session = Session.find_by!(session_id: session.id)
+  def destroy
+    list = @lists.find(params[:id])
+    if list.destroy
+      new_list = @lists.find_by('rank > ?', list.rank)
+
+      unless new_list
+        new_list = @lists.last
+      end
+
+      respond_with_turbo_stream(fallback: list_path(new_list)) do
+        turbo_stream.remove(list) + turbo_stream.replace(:current_list, partial: 'lists/load_show', locals: { list: new_list })
+      end
+    end
   end
 
 end

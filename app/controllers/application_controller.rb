@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
   before_action :write_session
+  before_action :set_session
+  before_action :set_lists
 
   unless Rails.env.production?
     before_action do
@@ -30,6 +32,14 @@ class ApplicationController < ActionController::Base
   # We have to write something into the session to read from it
   def write_session
     session[:last_request] = Time.current
+  end
+
+  def set_session
+    @session = Session.find_by!(session_id: session.id)
+  end
+
+  def set_lists
+    @lists = @session.lists.ranked
   end
 
 end

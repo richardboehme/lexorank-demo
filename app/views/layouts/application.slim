@@ -1,5 +1,5 @@
 doctype html
-html
+html.no-js data-controller="page"
   head
     title Lexorank Demo | Store user-defined order of your models by utilizing lexicographical sorting
     meta name="description" content="The lexorank gem allows you to store the order of your Rails or ActiveRecord models. This demo page demonstrates how one could use this."
@@ -21,11 +21,15 @@ html
 
     meta name="viewport" content="width=device-width, initial-scale=1.0"
 
-    = stylesheet_pack_tag'application', media: 'all'
+    = stylesheet_pack_tag 'application', media: 'all'
     = javascript_pack_tag 'application'
 
   body
     .toast-container.top-0.end-0.p-3.position-fixed#flash_messages style="z-index: 10"
       = render partial: 'layouts/flash'
-    div style="height: 100vh; width: 100vw"
-      = yield
+    .vh-100.w-100
+      .row.m-0
+        .col-lg-3.col-md-4.bg-light.sidebar
+          = render partial: 'lists/sidebar'
+        .col-lg-9.col-md-8
+          = yield

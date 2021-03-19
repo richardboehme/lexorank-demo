@@ -1,0 +1,29 @@
+html.no-js {
+  .no-js-show {
+    display: block !important;
+  }
+
+  .no-js-alert {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    z-index: 10;
+    font-size: 0.7rem;
+  }
+
+  .moveable {
+    cursor: auto;
+  }
+
+  a.moveable {
+    cursor: pointer;
+  }
+
+  .collapse {
+    display: block;
+  }
+
+  .navbar-toggler {
+    display: none;
+  }
+}
