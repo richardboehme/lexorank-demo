@@ -3,7 +3,8 @@ class ItemsController < ApplicationController
 
   def create
     item = Item.new(list: @list, name: params[:item][:name])
-    item.move_to(@list.items.ranked.count)
+    @items = @list.items.ranked
+    item.move_to(@items.count)
     if item.save
       flash.now[:success] = [{ title: 'Item successfully created!' }]
     else
@@ -12,7 +13,7 @@ class ItemsController < ApplicationController
 
     respond_with_turbo_stream(fallback: list_path(@list)) do
       if item.persisted?
-        turbo_stream.append(:items, item)
+        turbo_stream.append(:items, partial: 'items/item', locals: { item: item, item_counter: @items.count })
       end
     end
   end
@@ -20,7 +21,10 @@ class ItemsController < ApplicationController
   def update_position
     item = @list.items.find(params[:id].to_i)
     item.move_to!(params[:position].to_i)
-    render json: { rank: item.rank }
+    respond_to do |format|
+      format.json { render json: { rank: item.rank } }
+      format.html { redirect_to list_path(item.list) }
+    end
   end
 
   def destroy

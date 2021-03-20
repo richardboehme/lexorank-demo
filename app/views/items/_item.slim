@@ -2,7 +2,29 @@
   h4 = item.name
   .d-flex.align-items-center
     span.badge.bg-light.text-dark.rank-container.me-3
-      | Rank
+      | Rank:
       =< item.rank
+    .d-none.no-js-show
+      .btn-group.me-3
+        - if item_counter != 0
+          = form_with(url: update_position_list_item_path(item, list_id: item.list_id, position: item_counter - 1), method: :patch) do |f|
+            .btn-group
+              = f.button class: 'btn btn-outline-success' do
+                = icon(:arrow_up, height: 15, width: 15)
+              i
+        - else
+          = button_tag(class: 'btn btn-outline-success disabled') do
+            = icon(:arrow_up, height: 15, width: 15)
+
+        - if item_counter != @items.size - 1
+          = form_with(url: update_position_list_item_path(item, list_id: item.list_id, position: item_counter + 1), method: :patch) do |f|
+            .btn-group
+              i
+              = f.button class: 'btn btn-outline-success' do
+                = icon(:arrow_down, height: 15, width: 15)
+        - else
+          = button_tag(class: 'btn btn-outline-success disabled') do
+            = icon(:arrow_down, height: 15, width: 15)
+
     = delete_button(list_item_path(item, list_id: item.list_id), button: { class: 'btn btn-outline-success' }) do
       = icon(:check)

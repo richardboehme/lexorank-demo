@@ -32,14 +32,15 @@
         ) do
           = icon(:github)
           span.d-md-none.ms-2 Gem Source
-      .col-md-12.pt-2.d-flex.align-items-center.d-none.no-js-show
-        = icon( \
-          :exclamation_triangle,
-          class: 'text-warning me-3',
-          height: 75,
-          width: 75 \
-        )
-        | JavaScript is disabled. The site will work well but may not run as smooth (especially moving objects around is kind of hard without JavaScript).
+      .d-none.no-js-show
+        .col-md-12.pt-2.d-flex.align-items-center
+          = icon( \
+            :exclamation_triangle,
+            class: 'text-warning me-3',
+            height: 75,
+            width: 75 \
+          )
+          | JavaScript is disabled. The site will work well but may not run as smooth (especially moving objects around is kind of hard without JavaScript).
     .collapse.navbar-collapse.mt-4.overflow-hidden.fix-shadow-overlay id="navBar" class=('show' if @lists.size == 0)
       h6.px-2.fw-lighter Lists
       ul.nav.flex-column.flex-fill style="overflow-y: auto"

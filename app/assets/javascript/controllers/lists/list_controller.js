@@ -16,7 +16,7 @@ export default class extends Controller {
 
   setActive(e) {
     this.linkTargets.forEach((el, index) => {
-      if(el.id === `list_${e.detail.id}`) {
+      if(el.parentElement.id === `list_${e.detail.id}`) {
         el.classList.add('active');
         // if a new list was added (at the end of the list) we want to scroll to it
         if(index === this.linkTargets.length - 1) {

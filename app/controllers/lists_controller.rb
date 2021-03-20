@@ -21,7 +21,7 @@ class ListsController < ApplicationController
       flash.now[:danger] = list.errors.full_messages.map { |messages| { title: 'Error while creating a new list!', message: messages } }
     end
 
-    respond_with_turbo_stream(fallback: list_path(list)) do
+    respond_with_turbo_stream(fallback: list.persisted? ? list_path(list) : lists_path) do
       if list.persisted?
         turbo_stream.append(:lists, partial: 'lists/list', locals: { list: list, list_counter: @lists.size }) +
           turbo_stream.replace(:current_list, partial: 'lists/load_show', locals: { list: list })

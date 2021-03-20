@@ -4,7 +4,8 @@ require 'rails/test_help'
 
 class ActiveSupport::TestCase
   # Run tests in parallel with specified workers
-  parallelize(workers: :number_of_processors)
+  workers = ENV['PARALLEL'].to_i == 0 ? :number_of_processors : ENV['PARALLEL']
+  parallelize(workers: workers)
 
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
