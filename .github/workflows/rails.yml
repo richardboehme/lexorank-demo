@@ -1,0 +1,68 @@
+name: Rails
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+jobs:
+  test:
+    env:
+      RAILS_ENV: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build and start the DB
+        run: docker-compose up -d
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.0'
+          bundler-cache: true
+      - name: Setup Rails DB
+        run: bundle exec rails db:prepare
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - uses: actions/cache@v2
+        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - name: Install JS Dependencies
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
+        run: yarn install
+      - name: Compile Assets
+        run: bundle exec rails assets:precompile
+      - name: Run Tests with JS
+        run: bundle exec rails test:all
+      - name: Run Tests without JS
+        env:
+          NOJS: 1
+        run: bundle exec rails test:all
+  brakeman:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.0'
+          bundler: 'none'
+      - name: Install Brakeman
+        run: gem install brakeman
+      - name: Run Brakeman
+        run: brakeman -A
+  bundle-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.0'
+          bundler: 'none'
+      - name: Install Bundle Audit
+        run: gem install bundle-audit
+      - name: Run Bundle Audit
+        run: bundle audit check --update
+
