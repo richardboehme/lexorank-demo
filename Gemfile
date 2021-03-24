@@ -25,7 +25,7 @@ gem 'turbo-rails'
 
 gem 'slim-rails'
 
-gem 'activerecord-session_store', github: 'rails/activerecord-session_store', ref: 'f188efbc49a522123cc8acc805143824176d01c1'
+gem 'activerecord-session_store', '~> 2.0.0'
 
 gem 'lexorank', '~> 0.1.2'
 

@@ -35,7 +35,7 @@ class ApplicationController < ActionController::Base
   end
 
   def set_session
-    @session = Session.find_by!(session_id: session.id)
+    @session = Session.find_by!(session_id: session.id.private_id)
   end
 
   def set_lists
