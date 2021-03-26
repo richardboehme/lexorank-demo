@@ -1,0 +1,16 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: 127.0.0.1
+  port: 3306
+  username: root
+  password: root
+
+development:
+  <<: *default
+  database: lexorank_demo
+
+test:
+  <<: *default
+  database: lexorank_demo_test

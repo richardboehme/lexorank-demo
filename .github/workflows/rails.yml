@@ -19,7 +19,9 @@ jobs:
           ruby-version: '3.0'
           bundler-cache: true
       - name: Setup Rails DB
-        run: bundle exec rails db:prepare
+        run: |
+          cp config/database.yml.example config/database.yml
+          bundle exec rails db:prepare
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn cache dir)"

@@ -1,24 +1,43 @@
-# README
+# Lexorank Demo Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This little Rails App demonstrates the power of the [Lexorank Gem](https://www.github.com/richardboehme/lexorank) and shows how to use it.
 
-Things you may want to cover:
+You can visit the live demo [here](https://lexorank.richardboeh.me).
 
-* Ruby version
+## Development
 
-* System dependencies
+### Setup Application
 
-* Configuration
+Install dependencies:
 
-* Database creation
+* Ruby Version: 3.0.0
+* Yarn
+* `libmysql-dev`
 
-* Database initialization
+This project uses MySQL / MariaDB. If you want to you can use the `docker-compose.yml` file to set up a database for you. Just run `docker-compose up -d`.
 
-* How to run the test suite
+Otherwise you might have to change the contents of `config/database.yml` to make the application run.
 
-* Services (job queues, cache servers, search engines, etc.)
+Run the following commands:
+```bash
+$ yarn install --check-files
+$ bundle install
+$ rails db:prepare
+$ rails s
+```
 
-* Deployment instructions
+You should have the app running by now.
 
-* ...
+For running tests you may have to install a chromium browser.
+
+### Contributing
+
+Bug reports and pull requests are highly welcomed and appreciated. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](CODE_OF_CONDUCT.md).
+
+1. Fork the repository
+2. Create your feature branch by branching off of **main** (`git checkout -b my-new-feature`)
+3. Make your changes
+4. Make sure all tests run successfully (`rails test:all` and `NOJS=1 rails test:all`)
+5. Commit your changes (`git commit -am 'Add some feature'`)
+6. Push to the branch (`git push origin my-new-feature`)
+7. Create a new pull request
