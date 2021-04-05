@@ -63,6 +63,14 @@ class ListsTest < ApplicationSystemTestCase
     end
   end
 
+  should 'delete last list' do
+    create_list("List")
+    assert_difference -> { List.count }, -1 do
+      click_on 'Delete'
+      assert_no_selector 'li.nav-item'
+    end
+  end
+
   should 'change rank when moving lists around' do
     2.times do |n|
       create_list("List #{n}")

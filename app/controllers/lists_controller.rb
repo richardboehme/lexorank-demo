@@ -47,7 +47,7 @@ class ListsController < ApplicationController
         new_list = @lists.last
       end
 
-      respond_with_turbo_stream(fallback: list_path(new_list)) do
+      respond_with_turbo_stream(fallback: new_list ? list_path(new_list) : lists_path) do
         turbo_stream.remove(list) + turbo_stream.replace(:current_list, partial: 'lists/load_show', locals: { list: new_list })
       end
     end
