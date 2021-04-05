@@ -69,6 +69,7 @@ class ListsTest < ApplicationSystemTestCase
       click_on 'Delete'
       assert_no_selector 'li.nav-item'
     end
+    assert_selector 'h5', text: 'Start by creating a new list!'
   end
 
   should 'change rank when moving lists around' do

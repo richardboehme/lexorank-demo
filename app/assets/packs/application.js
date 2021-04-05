@@ -16,6 +16,7 @@ import 'bootstrap-icons/icons/check.svg'
 import 'bootstrap-icons/icons/trash.svg'
 import 'bootstrap-icons/icons/arrow-up.svg'
 import 'bootstrap-icons/icons/arrow-down.svg'
+import 'bootstrap-icons/icons/sort-alpha-down.svg'
 
 import '../stylesheet'
 import '../javascript/controllers'
