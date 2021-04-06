@@ -10,7 +10,7 @@ You can visit the live demo [here](https://lexorank.richardboeh.me).
 
 Install dependencies:
 
-* Ruby Version: 3.0.0
+* Ruby Version: 3.0.1
 * Yarn
 * `libmysql-dev`
 
