@@ -10,7 +10,7 @@ gem 'mysql2'
 # Use Puma as the app server
 gem 'puma', '~> 5.2'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker', '6.0.0.beta.6'
+gem 'webpacker', '6.0.0.beta.7'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
