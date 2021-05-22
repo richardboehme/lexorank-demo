@@ -1,6 +1,6 @@
 .navbar-expand-md.h-100
-  .p-3.h-100.flex-column.d-flex
-    .row.px-2
+  .h-100.flex-column.d-flex
+    .row.px-2.mb-4.px-3.pt-3
       .col-md-8.d-flex.justify-content-between
         h4 Lexorank Demo Application
         button.navbar-toggler type="button" data-bs-toggle="collapse" data-bs-target="#navBar" aria-controls="navBar" aria-expanded="false" aria-label="Toggle navigation"
@@ -41,12 +41,12 @@
             width: 75 \
           )
           | JavaScript is disabled. The site will work well but may not run as smooth (especially moving objects around is kind of hard without JavaScript).
-    .collapse.navbar-collapse.mt-4.overflow-hidden.fix-shadow-overlay id="navBar" class=('show' if @lists.size == 0)
-      h6.px-2.fw-lighter Lists
-      ul.nav.flex-column.flex-fill style="overflow-y: auto"
+    .collapse.navbar-collapse.overflow-hidden id="navBar" class=('show' if @lists.size == 0)
+      h6.px-2.fw-lighter.px-3 Lists
+      ul.nav.flex-column.flex-fill.px-3 style="overflow-y: auto"
         = turbo_frame_tag(:lists, target: :current_list, data: { controller: 'lists--list', action: 'lists--details:listAppeared@window->lists--list#setActive' }) do
           = render(partial: 'list', collection: @lists)
-      .pt-3
+      .p-3
         = form_with(model: List.new, data: { controller: 'reset-form', action: 'turbo:submit-end->reset-form#reset' }) do |f|
           .input-group
             = f.text_field :name, class: 'form-control', placeholder: 'New List'
