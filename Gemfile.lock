@@ -174,7 +174,7 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    redis (4.2.5)
+    redis (4.3.1)
     regexp_parser (2.1.1)
     rexml (3.2.5)
     rubyzip (2.3.0)
@@ -255,7 +255,7 @@ DEPENDENCIES
   puma (~> 5.3)
   rack-attack
   rails (~> 6.1.3.2)
-  redis (~> 4.0)
+  redis (~> 4.3)
   rexml
   selenium-webdriver
   shoulda
