@@ -1,0 +1,17 @@
+name: Deployment
+on:
+  workflow_run:
+    workflows: [ Rails ]
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - uses: octokit/request-action@v2.x
+        with:
+          route: POST /repos/richardboehme/lexorank-demo-deployment/deployments
+          ref: main
+        env:
+          GITHUB_TOKEN: ${{ secrets.DEPLOYMENT_TOKEN }}
