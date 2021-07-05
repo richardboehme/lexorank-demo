@@ -20,7 +20,7 @@
     "postcss-preset-env": "^6.7.0",
     "sass": "^1.35.1",
     "sass-loader": "^12.1.0",
-    "sortablejs": "^1.13.0",
+    "sortablejs": "^1.14.0",
     "stimulus": "^2.0.0",
     "stimulus-use": "^0.25.3",
     "webpack": "^5.41.1",
