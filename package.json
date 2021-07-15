@@ -23,6 +23,7 @@
     "sortablejs": "^1.14.0",
     "stimulus": "^2.0.0",
     "stimulus-use": "^0.25.4",
+    "svgo": "2.3.1",
     "webpack": "^5.44.0",
     "webpack-cli": "^4.2.0"
   },
@@ -41,12 +42,6 @@
     "presets": [
       "./node_modules/@rails/webpacker/package/babel/preset.js"
     ]
-  },
-  "browserslist": [
-    "defaults"
-  ],
-  "babel": {
-    "presets": ["./node_modules/@rails/webpacker/package/babel/preset.js"]
   },
   "browserslist": [
     "defaults"
