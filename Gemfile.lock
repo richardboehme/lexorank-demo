@@ -101,7 +101,7 @@ GEM
       activesupport (>= 3.0)
       nokogiri (>= 1.6)
     kgio (2.11.3)
-    lexorank (0.1.2)
+    lexorank (0.1.3)
       activerecord
       activesupport
     listen (3.5.1)
@@ -244,7 +244,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   cloudflare-rails
   inline_svg
-  lexorank (~> 0.1.2)
+  lexorank (~> 0.1.3)
   listen (~> 3.2)
   mysql2
   prosopite
