@@ -54,7 +54,7 @@ jobs:
       - name: Install Brakeman
         run: gem install brakeman
       - name: Run Brakeman
-        run: brakeman -A
+        run: brakeman -A --format github
   bundle-audit:
     runs-on: ubuntu-latest
     steps:
