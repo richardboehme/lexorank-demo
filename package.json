@@ -18,7 +18,7 @@
     "postcss-import": "^14.0.2",
     "postcss-loader": "^6.1.1",
     "postcss-preset-env": "^6.7.0",
-    "sass": "^1.36.0",
+    "sass": "^1.37.2",
     "sass-loader": "^12.1.0",
     "sortablejs": "^1.14.0",
     "stimulus": "^2.0.0",
