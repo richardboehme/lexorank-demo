@@ -3,7 +3,7 @@
   "private": true,
   "dependencies": {
     "@hotwired/turbo-rails": "^7.0.0-rc.1",
-    "@popperjs/core": "^2.7.2",
+    "@popperjs/core": "^2.9.3",
     "@rails/actioncable": "^6.1.4",
     "@rails/ujs": "^6.1.4",
     "@rails/webpacker": "6.0.0-beta.7",
