@@ -22,7 +22,7 @@
     "sass-loader": "^12.1.0",
     "sortablejs": "^1.14.0",
     "stimulus": "^2.0.0",
-    "stimulus-use": "^0.25.4",
+    "stimulus-use": "^0.26.0",
     "svgo": "^2.5.0",
     "webpack": "^5.52.1",
     "webpack-cli": "^4.8.0"
