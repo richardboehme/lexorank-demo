@@ -4399,10 +4399,10 @@ stable@^0.1.8:
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.5.0.tgz#161c7dac177659fd9811f43771fa99381478628c"
   integrity sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow=
 
-stimulus-use@^0.26.0:
-  version "0.26.0"
-  resolved "https://registry.yarnpkg.com/stimulus-use/-/stimulus-use-0.26.0.tgz#eb3f874bf2ec1ff213589cb5fbe2d314fe5d2741"
-  integrity sha512-p9uqV/STRR3QJb9r1ijPiPOmF+vQtcvs8/9D4eDF2OdWOafr0prG/Cd9lZNzamGrejhOqh90mOgrK+RTBP9HLA==
+stimulus-use@^0.41.0:
+  version "0.41.0"
+  resolved "https://registry.yarnpkg.com/stimulus-use/-/stimulus-use-0.41.0.tgz#afe2559281ebe0504b1d35eb0e8e77df9ebd6fb6"
+  integrity sha512-d+XWb5YN2L9I+4zQDtE1sJVy1DBO+1qgNcjV0XpMw7KXPJ8m8JA5lcJk3qgbxV86ePHko0CP9F3dzVsapQwzmA==
   dependencies:
     hotkeys-js ">=3"
 
