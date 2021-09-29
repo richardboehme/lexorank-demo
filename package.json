@@ -24,7 +24,7 @@
     "stimulus": "^2.0.0",
     "stimulus-use": "^0.41.0",
     "svgo": "^2.7.0",
-    "webpack": "^5.54.0",
+    "webpack": "^5.55.1",
     "webpack-cli": "^4.8.0"
   },
   "version": "0.1.0",
