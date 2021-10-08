@@ -13,6 +13,7 @@
             controller: 'tooltip',
             bs_placement: 'bottom' \
           },
+          'aria-label': 'Demo Source Code',
           title: 'Demo Source Code',
           rel: 'noreferrer',
           target: :_blank \
@@ -26,6 +27,7 @@
             controller: 'tooltip',
             bs_placement: 'bottom' \
           },
+          'aria-label': 'Gem Source',
           title: 'Gem Source',
           rel: 'noreferrer',
           target: :_blank \
@@ -50,5 +52,5 @@
         = form_with(model: List.new, data: { controller: 'reset-form', action: 'turbo:submit-end->reset-form#reset' }) do |f|
           .input-group
             = f.text_field :name, class: 'form-control', placeholder: 'New List'
-            = f.button(class: 'btn btn-outline-success') do
+            = f.button(class: 'btn btn-outline-success', 'aria-label': 'Create list') do
               = icon(:plus)

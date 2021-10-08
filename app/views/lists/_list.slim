@@ -14,19 +14,19 @@ li.nav-item.d-flex.flex-xxl-row.flex-md-column.flex-row data-update-position-pat
       - if list_counter != 0
         = form_with(url: update_position_list_path(list, position: list_counter - 1), method: :patch) do |f|
           .btn-group
-            = f.button class: 'btn btn-outline-success' do
+            = f.button class: 'btn btn-outline-success', 'aria-label': 'Move item up' do
               = icon(:arrow_up, height: 15, width: 15)
             i
       - else
-        = button_tag(class: 'btn btn-outline-success disabled') do
+        = button_tag(class: 'btn btn-outline-success disabled', 'aria-label': 'Move item up') do
           = icon(:arrow_up, height: 15, width: 15)
 
       - if list_counter != @lists.size - 1
         = form_with(url: update_position_list_path(list, position: list_counter + 1), method: :patch) do |f|
           .btn-group
             i
-            = f.button class: 'btn btn-outline-success' do
+            = f.button class: 'btn btn-outline-success', 'aria-label': 'Move item down' do
               = icon(:arrow_down, height: 15, width: 15)
       - else
-        = button_tag(class: 'btn btn-outline-success disabled') do
+        = button_tag(class: 'btn btn-outline-success disabled', 'aria-label': 'Move item down') do
           = icon(:arrow_down, height: 15, width: 15)
