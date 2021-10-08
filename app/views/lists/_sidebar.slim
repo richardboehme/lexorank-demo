@@ -45,7 +45,7 @@
           | JavaScript is disabled. The site will work well but may not run as smooth (especially moving objects around is kind of hard without JavaScript).
     .collapse.navbar-collapse.overflow-hidden id="navBar" class=('show' if @lists.size == 0)
       h5.px-2.fw-lighter.px-3 Lists
-      ul.nav.flex-column.flex-fill.px-3 style="overflow-y: auto"
+      .nav.flex-column.flex-fill.px-3 style="overflow-y: auto"
         = turbo_frame_tag(:lists, target: :current_list, data: { controller: 'lists--list', action: 'lists--details:listAppeared@window->lists--list#setActive' }) do
           = render(partial: 'list', collection: @lists)
       .p-3

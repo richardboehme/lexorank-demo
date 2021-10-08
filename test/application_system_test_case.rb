@@ -20,7 +20,7 @@ class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
         click_on 'button'
       end
 
-      assert_selector 'li.nav-item', text: name
+      assert_selector '.nav-item', text: name
 
       if js?
         within '.toast-header' do
