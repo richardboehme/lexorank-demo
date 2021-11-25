@@ -2,6 +2,9 @@ require "test_helper"
 
 class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
 
+  # TODO: Remove once we upgrade to Rails 7
+  Selenium::WebDriver.logger.ignore(:browser_options)
+
   def self.js?
     !ENV['NOJS']
   end
