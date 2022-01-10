@@ -105,7 +105,7 @@ GEM
       activesupport (>= 5.0)
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
-    inline_svg (1.7.2)
+    inline_svg (1.8.0)
       activesupport (>= 3.0)
       nokogiri (>= 1.6)
     io-wait (0.2.1)
