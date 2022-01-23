@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 require 'lexorank/rankable'
 class List < ApplicationRecord
-  has_many :items
+  has_many :items, dependent: :destroy
   belongs_to :session
 
   rank!(group_by: :session)
 
-  validates_presence_of :name
+  validates :name, presence: true
 end

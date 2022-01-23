@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 require 'application_system_test_case'
 
 class ItemsTest < ApplicationSystemTestCase
-
   setup do
     visit root_path
     create_list('List 1')
@@ -41,8 +42,8 @@ class ItemsTest < ApplicationSystemTestCase
       assert_no_selector '.list-group-item'
     end
 
-    list2 = List.find_by(name: 'List 2')
-    create_item('Item 2', list2)
+    list_2 = List.find_by(name: 'List 2')
+    create_item('Item 2', list_2)
     within '#items' do
       assert_selector '.list-group-item', count: 1, text: 'Item 2'
     end
@@ -61,7 +62,6 @@ class ItemsTest < ApplicationSystemTestCase
       end
       assert_no_selector '.list-group-item'
     end
-
   end
 
   should 'move items around' do
@@ -69,36 +69,35 @@ class ItemsTest < ApplicationSystemTestCase
       create_item("Item #{n}", @list)
     end
 
-    item1, item2 = *@list.items.ranked.to_a
+    item_1, item_2 = *@list.items.ranked.to_a
 
-    assert item2.rank > item1.rank
+    assert item_2.rank > item_1.rank
 
-    item1_element = find("##{dom_id(item1)}")
-    item2_element = find("##{dom_id(item2)}")
+    item_1_element = find("##{dom_id(item_1)}")
+    item_2_element = find("##{dom_id(item_2)}")
 
-    item1_element.assert_selector '.rank-container', text: "Rank: #{item1.rank}"
-    item2_element.assert_selector '.rank-container', text: "Rank: #{item2.rank}"
+    item_1_element.assert_selector '.rank-container', text: "Rank: #{item_1.rank}"
+    item_2_element.assert_selector '.rank-container', text: "Rank: #{item_2.rank}"
 
     if js?
-      item2_element.drag_to item1_element
+      item_2_element.drag_to item_1_element
     else
-      item1_element.assert_selector 'button.disabled > svg.bi-arrow-up'
-      item2_element.assert_selector 'button.disabled > svg.bi-arrow-down'
-      item2_element.find('.btn-group button:not(.disabled)').click
-      assert_selector '.list-group:first-child', text: item2.name
+      item_1_element.assert_selector 'button.disabled > svg.bi-arrow-up'
+      item_2_element.assert_selector 'button.disabled > svg.bi-arrow-down'
+      item_2_element.find('.btn-group button:not(.disabled)').click
+      assert_selector '.list-group:first-child', text: item_2.name
     end
 
-    assert_not_equal item2.rank, item2.reload.rank
-    assert item2.rank < item1.rank
+    assert_not_equal item_2.rank, item_2.reload.rank
+    assert item_2.rank < item_1.rank
 
-    item1_element = find("##{dom_id(item1)}")
-    item2_element = find("##{dom_id(item2)}")
+    item_1_element = find("##{dom_id(item_1)}")
+    item_2_element = find("##{dom_id(item_2)}")
 
-    item2_element.assert_selector '.rank-container', text: "Rank: #{item2.rank}"
+    item_2_element.assert_selector '.rank-container', text: "Rank: #{item_2.rank}"
 
     all_items = all('.list-group-item')
-    assert_equal item2_element, all_items.first
-    assert_equal item1_element, all_items.last
+    assert_equal item_2_element, all_items.first
+    assert_equal item_1_element, all_items.last
   end
-
 end

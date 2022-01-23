@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ItemsController < ApplicationController
   before_action :set_list
 
@@ -39,5 +41,4 @@ class ItemsController < ApplicationController
   def set_list
     @list = @lists.find(params[:list_id].to_i)
   end
-
 end

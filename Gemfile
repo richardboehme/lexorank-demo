@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -45,6 +47,7 @@ group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.7'
   gem 'brakeman'
+  gem 'ruboconf-rails', '~> 1.1.0'
 end
 
 group :test do

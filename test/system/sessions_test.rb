@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 require 'application_system_test_case'
 
 class SessionsTest < ApplicationSystemTestCase
-
   should 'have different lists and items for different sessions' do
     visit root_path
     create_list('List from first session')
@@ -17,5 +18,4 @@ class SessionsTest < ApplicationSystemTestCase
     visit root_path
     assert_selector '.nav-item', count: 1, text: 'List from first session'
   end
-
 end
