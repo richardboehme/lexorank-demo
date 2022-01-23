@@ -1,5 +1,6 @@
-module ApplicationHelper
+# frozen_string_literal: true
 
+module ApplicationHelper
   def flash_to_icon(type)
     case type.to_sym
     when :danger
@@ -15,12 +16,9 @@ module ApplicationHelper
 
   # We use our own implementation instead of link_to(method: :delete) to allow
   # to site to be used without any js
-  def delete_button(url, form: {}, button: {})
+  def delete_button(url, form: {}, button: {}, &block)
     form_with(**form.merge(url: url, method: :delete)) do |f|
-      f.button button do
-        yield
-      end
+      f.button button, &block
     end
   end
-
 end

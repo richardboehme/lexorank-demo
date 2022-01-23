@@ -1,7 +1,8 @@
-require "test_helper"
+# frozen_string_literal: true
+
+require 'test_helper'
 
 class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
-
   def self.js?
     !ENV['NOJS']
   end
@@ -48,5 +49,4 @@ class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
       end
     end
   end
-
 end

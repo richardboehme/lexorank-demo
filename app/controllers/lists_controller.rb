@@ -1,5 +1,6 @@
-class ListsController < ApplicationController
+# frozen_string_literal: true
 
+class ListsController < ApplicationController
   def index
   end
 
@@ -43,14 +44,11 @@ class ListsController < ApplicationController
     if list.destroy
       new_list = @lists.find_by('rank > ?', list.rank)
 
-      unless new_list
-        new_list = @lists.last
-      end
+      new_list ||= @lists.last
 
       respond_with_turbo_stream(fallback: new_list ? list_path(new_list) : lists_path) do
         turbo_stream.remove(list) + turbo_stream.replace(:current_list, partial: 'lists/load_show', locals: { list: new_list })
       end
     end
   end
-
 end

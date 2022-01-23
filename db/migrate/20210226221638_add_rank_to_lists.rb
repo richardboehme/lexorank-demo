@@ -1,6 +1,10 @@
+# frozen_string_literal: true
+
 class AddRankToLists < ActiveRecord::Migration[6.1]
   def change
-    add_column :lists, :rank, :string
-    add_index :lists, :rank, unique: true
+    change_table :lists, bulk: true do |t|
+      t.string :rank
+      t.index :rank, unique: true
+    end
   end
 end

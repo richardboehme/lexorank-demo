@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 require 'lexorank/rankable'
 class Item < ApplicationRecord
   belongs_to :list
 
   rank!(group_by: :list)
 
-  validates_presence_of :name
+  validates :name, presence: true
 end

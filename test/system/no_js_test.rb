@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 require 'application_system_test_case'
 
 class NoJsTest < ApplicationSystemTestCase
-
   unless js?
     should 'show no js hint' do
       visit root_path
@@ -11,5 +12,4 @@ class NoJsTest < ApplicationSystemTestCase
       end
     end
   end
-
 end

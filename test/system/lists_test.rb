@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 require 'application_system_test_case'
 
 class ListsTest < ApplicationSystemTestCase
-
   setup do
     visit root_path
   end
@@ -59,12 +60,11 @@ class ListsTest < ApplicationSystemTestCase
       click_on 'Delete'
       assert_selector '.nav-item', count: 2
       assert_selector 'a.active', text: 'List 2'
-
     end
   end
 
   should 'delete last list' do
-    create_list("List")
+    create_list('List')
     assert_difference -> { List.count }, -1 do
       click_on 'Delete'
       assert_no_selector '.nav-item'
@@ -77,36 +77,35 @@ class ListsTest < ApplicationSystemTestCase
       create_list("List #{n}")
     end
 
-    list1, list2 = *List.ranked.to_a
+    list_1, list_2 = *List.ranked.to_a
 
-    assert list2.rank > list1.rank
+    assert list_2.rank > list_1.rank
 
-    list1_element = find("##{dom_id(list1)}")
-    list2_element = find("##{dom_id(list2)}")
+    list_1_element = find("##{dom_id(list_1)}")
+    list_2_element = find("##{dom_id(list_2)}")
 
-    list1_element.assert_selector '.rank-container', text: "Rank: #{list1.rank}"
-    list2_element.assert_selector '.rank-container', text: "Rank: #{list2.rank}"
+    list_1_element.assert_selector '.rank-container', text: "Rank: #{list_1.rank}"
+    list_2_element.assert_selector '.rank-container', text: "Rank: #{list_2.rank}"
 
     if js?
-      list2_element.drag_to list1_element
+      list_2_element.drag_to list_1_element
     else
-      list1_element.assert_selector 'button.disabled > svg.bi-arrow-up'
-      list2_element.assert_selector 'button.disabled > svg.bi-arrow-down'
-      list2_element.find('button:not(.disabled)').click
-      assert_selector '.nav-item > a.active', text: list2.name
+      list_1_element.assert_selector 'button.disabled > svg.bi-arrow-up'
+      list_2_element.assert_selector 'button.disabled > svg.bi-arrow-down'
+      list_2_element.find('button:not(.disabled)').click
+      assert_selector '.nav-item > a.active', text: list_2.name
     end
 
-    assert_not_equal list2.rank, list2.reload.rank
-    assert list2.rank < list1.rank
+    assert_not_equal list_2.rank, list_2.reload.rank
+    assert list_2.rank < list_1.rank
 
-    list1_element = find("##{dom_id(list1)}")
-    list2_element = find("##{dom_id(list2)}")
+    list_1_element = find("##{dom_id(list_1)}")
+    list_2_element = find("##{dom_id(list_2)}")
 
-    list2_element.assert_selector '.rank-container', text: "Rank: #{list2.rank}"
+    list_2_element.assert_selector '.rank-container', text: "Rank: #{list_2.rank}"
 
     all_lists = all('.nav-item')
-    assert_equal list2_element, all_lists.first
-    assert_equal list1_element, all_lists.last
+    assert_equal list_2_element, all_lists.first
+    assert_equal list_1_element, all_lists.last
   end
-
 end

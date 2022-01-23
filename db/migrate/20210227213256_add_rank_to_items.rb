@@ -1,6 +1,10 @@
+# frozen_string_literal: true
+
 class AddRankToItems < ActiveRecord::Migration[6.1]
   def change
-    add_column :items, :rank, :string
-    add_index :items, [:rank, :list_id], unique: true
+    change_table :items, bulk: true do |t|
+      t.string :rank
+      t.index [:rank, :list_id], unique: true
+    end
   end
 end

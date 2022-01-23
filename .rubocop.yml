@@ -1,0 +1,2 @@
+inherit_gem:
+  ruboconf-rails: ruboconf-rails.yml

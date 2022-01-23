@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ApplicationController < ActionController::Base
   before_action :write_session
   before_action :set_session
@@ -13,12 +15,12 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def respond_with_turbo_stream(fallback: nil, &block)
+  def respond_with_turbo_stream(fallback: nil, &_)
     respond_to do |format|
       format.turbo_stream do
         streams =
-          ''.tap do |out|
-            out << block.call.to_s
+          (+'').tap do |out|
+            out << yield.to_s
             out << turbo_stream.append(:flash_messages, partial: 'layouts/flash') unless flash.empty?
           end
         render turbo_stream: streams
@@ -41,5 +43,4 @@ class ApplicationController < ActionController::Base
   def set_lists
     @lists = @session.lists.ranked
   end
-
 end
