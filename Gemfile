@@ -10,7 +10,7 @@ gem 'rails', '~> 7.0.1'
 # Use mysql as the database for Active Record
 gem 'mysql2'
 # Use Puma as the app server
-gem 'puma', '~> 5.5'
+gem 'puma', '~> 5.6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '6.0.0.rc.6'
 # Use Redis adapter to run Action Cable in production
