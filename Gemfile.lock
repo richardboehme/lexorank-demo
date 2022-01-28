@@ -104,7 +104,7 @@ GEM
     ffi (1.15.5)
     globalid (1.0.0)
       activesupport (>= 5.0)
-    i18n (1.8.11)
+    i18n (1.9.1)
       concurrent-ruby (~> 1.0)
     inline_svg (1.8.0)
       activesupport (>= 3.0)
@@ -203,13 +203,13 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     redis (4.5.1)
-    regexp_parser (2.1.1)
+    regexp_parser (2.2.0)
     rexml (3.2.5)
-    ruboconf (1.1.0)
+    ruboconf (1.2.0)
       rubocop (~> 1.25.0)
       rubocop-performance (~> 1.13.2)
-    ruboconf-rails (1.1.0)
-      ruboconf (~> 1.1.0)
+    ruboconf-rails (1.2.0)
+      ruboconf (~> 1.2.0)
       rubocop-rails (~> 2.13.2)
     rubocop (1.25.0)
       parallel (~> 1.10)
@@ -307,7 +307,7 @@ DEPENDENCIES
   rails (~> 7.0.1)
   redis (~> 4.5)
   rexml
-  ruboconf-rails (~> 1.1.0)
+  ruboconf-rails (~> 1.2.0)
   selenium-webdriver
   shoulda
   shoulda-context
