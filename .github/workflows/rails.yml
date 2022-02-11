@@ -57,14 +57,3 @@ jobs:
         run: gem install brakeman
       - name: Run Brakeman
         run: brakeman -A --format github
-  bundle-audit:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: ruby/setup-ruby@v1
-        with:
-          bundler: 'none'
-      - name: Install Bundle Audit
-        run: gem install bundle-audit
-      - name: Run Bundle Audit
-        run: bundle audit check --update

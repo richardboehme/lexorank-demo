@@ -1,0 +1,23 @@
+name: Audit
+on:
+  schedule:
+    - cron: '1 0 * * *'
+  workflow_dispatch:
+jobs:
+  bundle-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler: 'none'
+      - name: Install Bundle Audit
+        run: gem install bundle-audit
+      - name: Run Bundle Audit
+        run: bundle audit check --update
+  yarn-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run Yarn Audit
+        run: yarn audit
