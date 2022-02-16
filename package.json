@@ -19,7 +19,7 @@
     "postcss-loader": "^6.2.1",
     "postcss-preset-env": "^7.3.3",
     "sass": "^1.49.7",
-    "sass-loader": "^12.5.0",
+    "sass-loader": "^12.6.0",
     "selfsigned": "^2.0.0",
     "sortablejs": "^1.14.0",
     "stimulus": "^2.0.0",
