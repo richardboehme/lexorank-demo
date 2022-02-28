@@ -153,7 +153,7 @@ GEM
     parallel (1.21.0)
     parser (3.1.0.0)
       ast (~> 2.4.1)
-    prosopite (1.0.7)
+    prosopite (1.0.8)
     pry (0.14.0)
       coderay (~> 1.1)
       method_source (~> 1.0)
