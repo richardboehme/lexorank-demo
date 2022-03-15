@@ -47,7 +47,7 @@ group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.7'
   gem 'brakeman'
-  gem 'ruboconf-rails', '~> 1.2.0'
+  gem 'ruboconf-rails', '~> 1.3.0'
 end
 
 group :test do
