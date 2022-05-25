@@ -21,8 +21,8 @@ html.no-js data-controller="page" lang="en"
 
     meta name="viewport" content="width=device-width, initial-scale=1.0"
 
-    = stylesheet_pack_tag 'application', media: 'all'
-    = javascript_pack_tag 'application'
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application'
 
   body
     .toast-container.top-0.end-0.p-3.position-fixed#flash_messages style="z-index: 10"

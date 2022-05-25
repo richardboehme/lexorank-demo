@@ -23,7 +23,7 @@ Run the following commands:
 $ yarn install --check-files
 $ bundle install
 $ rails db:prepare
-$ rails s
+$ bin/dev
 ```
 
 You should have the app running by now.

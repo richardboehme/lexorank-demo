@@ -38,8 +38,6 @@ jobs:
       - name: Install JS Dependencies
         if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn install
-      - name: Compile Assets
-        run: bundle exec rails assets:precompile
       - name: Run Tests with JS
         run: bundle exec rails test:all
       - name: Run Tests without JS

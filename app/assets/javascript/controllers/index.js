@@ -1,7 +1,5 @@
-import { Application } from "stimulus"
-import { definitionsFromContext } from "stimulus/webpack-helpers"
+import { Application } from 'stimulus';
+import { definitions } from 'stimulus:.';
 
-const application = Application.start()
-const context = require.context(".", true, /\_controller.js$/)
-application.load(definitionsFromContext(context))
-application.stimulusUseDebug = process.env.NODE_ENV === 'development'
+const app = Application.start();
+app.load(definitions);
