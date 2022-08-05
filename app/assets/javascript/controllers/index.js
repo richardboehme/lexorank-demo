@@ -1,4 +1,4 @@
-import { Application } from 'stimulus';
+import { Application } from '@hotwired/stimulus';
 import { definitions } from 'stimulus:.';
 
 const app = Application.start();
