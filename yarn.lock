@@ -2765,10 +2765,10 @@ stable@^0.1.8:
   resolved "https://registry.yarnpkg.com/stable/-/stable-0.1.8.tgz#836eb3c8382fe2936feaf544631017ce7d47a3cf"
   integrity sha512-ji9qxRnOVfcuLDySj9qzhGSEFVobyt1kIOSkj1qZzYLzq7Tos/oUUWvotUPQLlrsidqsK6tBH89Bc9kL5zHA6w==
 
-stimulus-use@^0.41.0:
-  version "0.41.0"
-  resolved "https://registry.yarnpkg.com/stimulus-use/-/stimulus-use-0.41.0.tgz#afe2559281ebe0504b1d35eb0e8e77df9ebd6fb6"
-  integrity sha512-d+XWb5YN2L9I+4zQDtE1sJVy1DBO+1qgNcjV0XpMw7KXPJ8m8JA5lcJk3qgbxV86ePHko0CP9F3dzVsapQwzmA==
+stimulus-use@^0.50.0:
+  version "0.50.0"
+  resolved "https://registry.yarnpkg.com/stimulus-use/-/stimulus-use-0.50.0.tgz#0bae92fbb1fd961cbb23569f9edd12ae642ce4a6"
+  integrity sha512-9NScZQiOycQdzh8VZ15pxk6ep/a22fgha2halOvZFpJITC4nsTbWlO7D1hm+9LspFxa5b28tQhm3XkbH/qAlGw==
   dependencies:
     hotkeys-js ">=3"
 
