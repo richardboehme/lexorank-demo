@@ -208,7 +208,7 @@ GEM
     rb-fsevent (0.11.0)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    redis (4.7.1)
+    redis (4.8.0)
     regexp_parser (2.5.0)
     rexml (3.2.5)
     ruboconf (1.6.0)
@@ -312,7 +312,7 @@ DEPENDENCIES
   puma (~> 5.6)
   rack-attack
   rails (~> 7.0.3)
-  redis (~> 4.7)
+  redis (~> 4.8)
   rexml
   ruboconf-rails (~> 1.6.0)
   selenium-webdriver

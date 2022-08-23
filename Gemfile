@@ -12,7 +12,7 @@ gem 'mysql2'
 # Use Puma as the app server
 gem 'puma', '~> 5.6'
 # Use Redis adapter to run Action Cable in production
-gem 'redis', '~> 4.7'
+gem 'redis', '~> 4.8'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
