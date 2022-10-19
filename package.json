@@ -26,7 +26,7 @@
   ],
   "devDependencies": {
     "esbuild-plugin-clean": "^0.9.0",
-    "esbuild-plugin-copy": "^1.3.0",
+    "esbuild-plugin-copy": "^1.5.2",
     "esbuild-plugin-stimulus": "^0.1.5"
   }
 }
