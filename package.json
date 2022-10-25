@@ -12,7 +12,7 @@
     "esbuild": "^0.14.54",
     "sass": "^1.55.0",
     "sortablejs": "^1.15.0",
-    "stimulus-use": "^0.50.0",
+    "stimulus-use": "^0.51.0",
     "svgo": "^3.0.0"
   },
   "version": "0.1.0",
