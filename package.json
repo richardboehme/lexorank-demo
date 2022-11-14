@@ -13,7 +13,7 @@
     "sass": "^1.56.1",
     "sortablejs": "^1.15.0",
     "stimulus-use": "^0.51.0",
-    "svgo": "^3.0.0"
+    "svgo": "^3.0.1"
   },
   "version": "0.1.0",
   "scripts": {
