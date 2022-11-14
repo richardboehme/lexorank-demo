@@ -215,11 +215,11 @@ GEM
       connection_pool
     regexp_parser (2.6.0)
     rexml (3.2.5)
-    ruboconf (1.7.0)
+    ruboconf (1.9.0)
       rubocop (~> 1.36.0)
       rubocop-performance (~> 1.14.0)
-    ruboconf-rails (1.7.0)
-      ruboconf (~> 1.7.0)
+    ruboconf-rails (1.9.0)
+      ruboconf (~> 1.9.0)
       rubocop-rails (~> 2.15.0)
     rubocop (1.36.0)
       json (~> 2.3)
@@ -231,7 +231,7 @@ GEM
       rubocop-ast (>= 1.20.1, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 3.0)
-    rubocop-ast (1.21.0)
+    rubocop-ast (1.23.0)
       parser (>= 3.1.1.0)
     rubocop-performance (1.14.3)
       rubocop (>= 1.7.0, < 2.0)
@@ -271,7 +271,7 @@ GEM
       railties (>= 6.0.0)
     tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
-    unicode-display_width (2.2.0)
+    unicode-display_width (2.3.0)
     unicorn (6.1.0)
       kgio (~> 2.6)
       raindrops (~> 0.7)
@@ -318,7 +318,7 @@ DEPENDENCIES
   rails (~> 7.0.4)
   redis (~> 5.0)
   rexml
-  ruboconf-rails (~> 1.7.0)
+  ruboconf-rails (~> 1.9.0)
   selenium-webdriver
   shoulda
   shoulda-context
