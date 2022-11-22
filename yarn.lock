@@ -356,10 +356,10 @@ esbuild-openbsd-64@0.15.14:
   resolved "https://registry.yarnpkg.com/esbuild-openbsd-64/-/esbuild-openbsd-64-0.15.14.tgz#ee64944d863e937611fc31adf349e9bb4f5f7eac"
   integrity sha512-rREQBIlMibBetgr2E9Lywt2Qxv2ZdpmYahR4IUlAQ1Efv/A5gYdO0/VIN3iowDbCNTLxp0bb57Vf0LFcffD6kA==
 
-esbuild-plugin-clean@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/esbuild-plugin-clean/-/esbuild-plugin-clean-1.0.0.tgz#4778b14b8908df6cde1bc301a0dcef4f7fd50f9f"
-  integrity sha512-8hYZqNalY1Vm4qR58tymkZhMy5bVjFlz1nS+Cj6I0DtctCPUhiBlrS2wx68uyaTMLpjO3HWWMITvTIzWTu25dw==
+esbuild-plugin-clean@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/esbuild-plugin-clean/-/esbuild-plugin-clean-1.0.1.tgz#3f44bce024f165c06b517056161e3d62b35bc8d7"
+  integrity sha512-ul606g0wX6oeobBgi3EqpZtCBCwNwCDivvnshsNS5pUsRylKoxUnDqK0ZIyPinlMbP6s8Opc9y2zOeY1Plhe8Q==
   dependencies:
     chalk "^4.1.2"
     del "^6.0.0"
