@@ -1,5 +1,4 @@
 import { Controller } from '@hotwired/stimulus'
-import { useDispatch } from 'stimulus-use'
 import Sortable from 'sortablejs';
 import Rails from "@rails/ujs";
 
@@ -9,8 +8,7 @@ export default class extends Controller {
   static targets = ['itemList'];
 
   connect() {
-    useDispatch(this);
-    this.dispatch('listAppeared', { id: this.idValue })
+    this.dispatch('listAppeared', { detail: { id: this.idValue }})
 
     Sortable.create(this.itemListTarget, {
       delay: 100,
