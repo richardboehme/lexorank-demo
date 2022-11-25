@@ -22,7 +22,7 @@ esbuild.build({
           './node_modules/bootstrap-icons/icons/sort-alpha-down.svg',
           './node_modules/bootstrap-icons/icons/plus.svg'
         ],
-        to: ['./app/assets/builds/static/*'],
+        to: ['./app/assets/builds/static'],
       },
     }),
     clean({
