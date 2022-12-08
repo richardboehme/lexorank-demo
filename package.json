@@ -9,7 +9,7 @@
     "@rails/ujs": "^7.0.4",
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.10.2",
-    "esbuild": "^0.15.18",
+    "esbuild": "^0.16.1",
     "sass": "^1.56.1",
     "sortablejs": "^1.15.0",
     "svgo": "^3.0.2"
