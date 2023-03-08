@@ -247,7 +247,7 @@ chalk@^4.1.2:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
-"chokidar@>=3.0.0 <4.0.0":
+"chokidar@>=3.0.0 <4.0.0", chokidar@^3.5.3:
   version "3.5.3"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.5.3.tgz#1cf37c8707b932bd1af1ae22c0432e2acd1903bd"
   integrity sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==
@@ -384,12 +384,13 @@ esbuild-plugin-clean@^1.0.1:
     chalk "^4.1.2"
     del "^6.0.0"
 
-esbuild-plugin-copy@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/esbuild-plugin-copy/-/esbuild-plugin-copy-2.0.2.tgz#3c215c421b35a4e48a3b3c5362e75a95602d9c4f"
-  integrity sha512-HlDgkHXagBCwaoB8tlQFeH08/i5a2ey6Pc26annV1YcG5CkAHzzRzmCwp3wdi5KHI//HVUgipS+Zsy2tQmn9gQ==
+esbuild-plugin-copy@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/esbuild-plugin-copy/-/esbuild-plugin-copy-2.1.0.tgz#f57d5ddbb8e814d5391ead997011393d66130127"
+  integrity sha512-RHKhPV9ZYuWqYZ7ZjJ8qgJHzDOQ5K+z+7aaMQaHfiHntBTaFgiy554Gad6KrM2pBAC7ZiYervUYQET1jIWoOLg==
   dependencies:
     chalk "^4.1.2"
+    chokidar "^3.5.3"
     fs-extra "^10.0.1"
     globby "^11.0.3"
 
