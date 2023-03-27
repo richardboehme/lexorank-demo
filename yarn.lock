@@ -384,10 +384,10 @@ esbuild-plugin-clean@^1.0.1:
     chalk "^4.1.2"
     del "^6.0.0"
 
-esbuild-plugin-copy@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/esbuild-plugin-copy/-/esbuild-plugin-copy-2.1.0.tgz#f57d5ddbb8e814d5391ead997011393d66130127"
-  integrity sha512-RHKhPV9ZYuWqYZ7ZjJ8qgJHzDOQ5K+z+7aaMQaHfiHntBTaFgiy554Gad6KrM2pBAC7ZiYervUYQET1jIWoOLg==
+esbuild-plugin-copy@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/esbuild-plugin-copy/-/esbuild-plugin-copy-2.1.1.tgz#638308ecfd679e4c7c76b71c62f7dd9a4cc7f901"
+  integrity sha512-Bk66jpevTcV8KMFzZI1P7MZKZ+uDcrZm2G2egZ2jNIvVnivDpodZI+/KnpL3Jnap0PBdIHU7HwFGB8r+vV5CVw==
   dependencies:
     chalk "^4.1.2"
     chokidar "^3.5.3"
