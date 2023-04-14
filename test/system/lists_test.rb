@@ -88,7 +88,7 @@ class ListsTest < ApplicationSystemTestCase
     list_2_element.assert_selector '.rank-container', text: "Rank: #{list_2.rank}"
 
     if js?
-      list_2_element.drag_to list_1_element
+      list_2_element.drag_to list_1_element, steps: 10
     else
       list_1_element.assert_selector 'button.disabled > svg.bi-arrow-up'
       list_2_element.assert_selector 'button.disabled > svg.bi-arrow-down'
@@ -96,6 +96,9 @@ class ListsTest < ApplicationSystemTestCase
       assert_selector '.nav-item > a.active', text: list_2.name
     end
 
+    within list_2_element do
+      assert_no_text 'g'
+    end
     assert_not_equal list_2.rank, list_2.reload.rank
     assert list_2.rank < list_1.rank
 

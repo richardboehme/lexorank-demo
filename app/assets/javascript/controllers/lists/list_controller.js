@@ -1,6 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 import Sortable from 'sortablejs';
 import Rails from '@rails/ujs'
+import { isTestEnv } from "../../util/environment";
 
 export default class extends Controller {
 
@@ -10,7 +11,8 @@ export default class extends Controller {
     const sortable = Sortable.create(this.element, {
       delay: 100,
       delayOnTouchOnly: true,
-      onEnd: this.updatePosition
+      onEnd: this.updatePosition,
+      forceFallback: isTestEnv()
     });
   }
 

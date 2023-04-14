@@ -1,6 +1,7 @@
 import { Controller } from '@hotwired/stimulus'
 import Sortable from 'sortablejs';
 import Rails from "@rails/ujs";
+import { isTestEnv } from '../../util/environment';
 
 export default class extends Controller {
 
@@ -14,7 +15,8 @@ export default class extends Controller {
       delay: 100,
       delayOnTouchOnly: true,
       chosenClass: 'shadow',
-      onEnd: this.updatePosition
+      onEnd: this.updatePosition,
+      forceFallback: isTestEnv()
     });
   }
 
