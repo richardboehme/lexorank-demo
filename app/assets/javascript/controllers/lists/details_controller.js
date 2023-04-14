@@ -7,9 +7,10 @@ export default class extends Controller {
 
   static values = { id: Number };
   static targets = ['itemList'];
+  static outlets = ['lists--list']
 
   connect() {
-    this.dispatch('listAppeared', { detail: { id: this.idValue }})
+    this.listsListOutlet.setActive(this.idValue)
 
     Sortable.create(this.itemListTarget, {
       delay: 100,
