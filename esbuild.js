@@ -26,7 +26,7 @@ esbuild.build({
       },
     }),
     clean({
-      patterns: ['./app/assets/builds/*', './app/assets/builds/static/*']
+      patterns: ['./app/assets/builds/*', './app/assets/builds/static/*', '!./app/assets/builds/*.css']
     })
   ],
   entryPoints: ['app/assets/entrypoints/application.js'],
