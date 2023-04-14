@@ -1,10 +1,10 @@
-const esbuild = require('esbuild')
-const { stimulusPlugin } = require('esbuild-plugin-stimulus')
-const { copy } = require('esbuild-plugin-copy')
-const { clean } = require('esbuild-plugin-clean')
+import * as esbuild from 'esbuild'
+import { stimulusPlugin } from 'esbuild-plugin-stimulus'
+import { copy } from 'esbuild-plugin-copy'
+import { clean } from 'esbuild-plugin-clean'
 
 
-esbuild.build({
+const ctx = await esbuild.context({
   plugins: [
     stimulusPlugin(),
     copy({
@@ -33,10 +33,12 @@ esbuild.build({
   bundle: true,
   outdir: 'app/assets/builds',
   sourcemap: true,
-  watch: process.env.WATCH == 'true' ? {
-    onRebuild(error, result) {
-      if (error) console.error('watch build failed:', error)
-      else console.log('watch build succeeded')
-    },
-  } : false
-}).catch(() => process.exit(1))
+  logLevel: 'info'
+})
+
+if(process.env.WATCH === 'true') {
+  await ctx.watch()
+} else {
+  await ctx.rebuild()
+  await ctx.dispose()
+}

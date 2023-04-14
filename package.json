@@ -16,7 +16,7 @@
   },
   "version": "0.1.0",
   "scripts": {
-    "build": "yarn node esbuild.js",
+    "build": "yarn node esbuild.mjs",
     "build:css": "sass ./app/assets/stylesheets/application.scss ./app/assets/builds/application.css --no-source-map --load-path=node_modules"
   },
   "browserslist": [
