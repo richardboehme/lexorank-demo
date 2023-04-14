@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'test_helper'
+require 'capybara/cuprite'
 
 class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
   def self.js?
@@ -11,8 +12,15 @@ class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
     self.class.js?
   end
 
-  driver = js? ? :selenium : :rack_test
-  driven_by driver, using: :headless_chrome, screen_size: [1920, 1080]
+  driver = js? ? :cuprite : :rack_test
+  driven_by(
+    driver,
+    using: :chrome,
+    screen_size: [1920, 1080],
+    options: {
+      headless: %w(0 no false).exclude?(ENV.fetch('HEADLESS', nil))
+    }
+  )
 
   def create_list(name)
     fill_in 'New List', with: name
