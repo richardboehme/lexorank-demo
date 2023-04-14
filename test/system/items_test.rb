@@ -80,7 +80,7 @@ class ItemsTest < ApplicationSystemTestCase
     item_2_element.assert_selector '.rank-container', text: "Rank: #{item_2.rank}"
 
     if js?
-      item_2_element.drag_to item_1_element
+      item_2_element.drag_to item_1_element, steps: 10
     else
       item_1_element.assert_selector 'button.disabled > svg.bi-arrow-up'
       item_2_element.assert_selector 'button.disabled > svg.bi-arrow-down'
@@ -88,6 +88,9 @@ class ItemsTest < ApplicationSystemTestCase
       assert_selector '.list-group:first-child', text: item_2.name
     end
 
+    within item_2_element do
+      assert_no_text item_2.rank
+    end
     assert_not_equal item_2.rank, item_2.reload.rank
     assert item_2.rank < item_1.rank
 
