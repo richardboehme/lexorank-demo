@@ -97,7 +97,7 @@ class ListsTest < ApplicationSystemTestCase
     end
 
     within list_2_element do
-      assert_no_text 'g'
+      assert_no_text list_2.rank
     end
     assert_not_equal list_2.rank, list_2.reload.rank
     assert list_2.rank < list_1.rank
