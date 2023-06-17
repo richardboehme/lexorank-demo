@@ -13,5 +13,6 @@ jobs:
         with:
           route: POST /repos/richardboehme/lexorank-demo-deployment/deployments
           ref: main
+          required_contexts: '[]'
         env:
           GITHUB_TOKEN: ${{ secrets.DEPLOYMENT_TOKEN }}
