@@ -1,31 +1,14 @@
 version: 2
 updates:
-- package-ecosystem: bundler
-  directory: "/"
-  schedule:
-    interval: daily
-    time: "04:00"
-  open-pull-requests-limit: 10
-  ignore:
-  - dependency-name: webpacker
-    versions:
-    - 6.0.0.pre.2
-- package-ecosystem: npm
-  directory: "/"
-  schedule:
-    interval: daily
-    time: "04:00"
-  open-pull-requests-limit: 10
-  ignore:
-  - dependency-name: "@rails/webpacker"
-    versions:
-    - "> 6.0.0.pre.beta.7, < 6.1"
-  - dependency-name: webpack
-    versions:
-    - 5.34.0
-  - dependency-name: mini-css-extract-plugin
-    versions:
-    - 1.5.0
-  - dependency-name: css-loader
-    versions:
-    - 5.2.1
+  - package-ecosystem: bundler
+    directory: "/"
+    schedule:
+      interval: daily
+      time: "04:00"
+    open-pull-requests-limit: 10
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: daily
+      time: "04:00"
+    open-pull-requests-limit: 10
