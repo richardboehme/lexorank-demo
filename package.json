@@ -10,7 +10,7 @@
     "bootstrap": "^5.3.1",
     "bootstrap-icons": "^1.10.5",
     "esbuild": "^0.18.19",
-    "sass": "^1.64.1",
+    "sass": "^1.64.2",
     "sortablejs": "^1.15.0",
     "svgo": "^3.0.2"
   },
