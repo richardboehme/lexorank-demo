@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rubycdp/cuprite.git
-  revision: cc26d526c5d6d784298f3282f8ea4a191eb0a177
+  revision: 7326bff1fe8d9cc94fd7b87b377e02d7fb3f1daa
   branch: main
   specs:
     cuprite (0.14.3)
@@ -82,7 +82,7 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
-    addressable (2.8.4)
+    addressable (2.8.5)
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     bindex (0.8.1)
