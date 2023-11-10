@@ -1,11 +1,11 @@
 GIT
   remote: https://github.com/rubycdp/cuprite.git
-  revision: 7326bff1fe8d9cc94fd7b87b377e02d7fb3f1daa
+  revision: 696b7efe52ad2d723ae2ff4656f314a483148bdf
   branch: main
   specs:
-    cuprite (0.14.3)
+    cuprite (0.15)
       capybara (~> 3.0)
-      ferrum (~> 0.13.0)
+      ferrum (~> 0.14.0)
 
 GEM
   remote: https://rubygems.org/
@@ -114,7 +114,7 @@ GEM
       railties (>= 6.0.0)
     date (3.3.3)
     erubi (1.12.0)
-    ferrum (0.13)
+    ferrum (0.14)
       addressable (~> 2.5)
       concurrent-ruby (~> 1.1)
       webrick (~> 1.7)
@@ -186,7 +186,7 @@ GEM
     public_suffix (5.0.3)
     puma (6.4.0)
       nio4r (~> 2.0)
-    racc (1.7.1)
+    racc (1.7.3)
     rack (2.2.8)
     rack-attack (6.7.0)
       rack (>= 1.0, < 4)
@@ -230,7 +230,7 @@ GEM
       redis-client (>= 0.17.0)
     redis-client (0.17.1)
       connection_pool
-    regexp_parser (2.8.1)
+    regexp_parser (2.8.2)
     rexml (3.2.6)
     ruboconf (1.12.0)
       rubocop (~> 1.54)
