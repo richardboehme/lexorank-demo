@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rubycdp/cuprite.git
-  revision: ddc9cee5188d49b84712ba1a88f31abb456badae
+  revision: 35d1dc27f0baf81e7e9e8130381028f6ce7cb07d
   branch: main
   specs:
     cuprite (0.15)
@@ -82,7 +82,7 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
-    addressable (2.8.5)
+    addressable (2.8.6)
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     bindex (0.8.1)
@@ -165,7 +165,7 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     nio4r (2.5.9)
-    nokogiri (1.15.4)
+    nokogiri (1.15.5)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     parallel (1.23.0)
@@ -183,7 +183,7 @@ GEM
       method_source (~> 1.0)
     pry-rails (0.3.9)
       pry (>= 0.10.4)
-    public_suffix (5.0.3)
+    public_suffix (5.0.4)
     puma (6.4.0)
       nio4r (~> 2.0)
     racc (1.7.3)
@@ -230,7 +230,7 @@ GEM
       redis-client (>= 0.17.0)
     redis-client (0.17.1)
       connection_pool
-    regexp_parser (2.8.2)
+    regexp_parser (2.8.3)
     rexml (3.2.6)
     ruboconf (1.12.0)
       rubocop (~> 1.54)
