@@ -11,7 +11,7 @@ You can visit the live demo [here](https://lexorank.richardboeh.me).
 Install dependencies:
 
 - Ruby Version: 3.3.0
-- Yarn
+- Yarn (installable using `corepack install`)
 - `libmysql-dev`
 
 This project uses MySQL / MariaDB. If you want to you can use the `docker-compose.yml` file to set up a database for you. Just run `docker-compose up -d`.
