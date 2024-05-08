@@ -1223,7 +1223,7 @@ __metadata:
     esbuild-plugin-stimulus: "npm:^0.1.5"
     sass: "npm:^1.76.0"
     sortablejs: "npm:^1.15.2"
-    svgo: "npm:^3.2.0"
+    svgo: "npm:^3.3.0"
   languageName: unknown
   linkType: soft
 
@@ -1763,9 +1763,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svgo@npm:^3.2.0":
-  version: 3.2.0
-  resolution: "svgo@npm:3.2.0"
+"svgo@npm:^3.3.0":
+  version: 3.3.0
+  resolution: "svgo@npm:3.3.0"
   dependencies:
     "@trysound/sax": "npm:0.2.0"
     commander: "npm:^7.2.0"
@@ -1775,8 +1775,8 @@ __metadata:
     csso: "npm:^5.0.5"
     picocolors: "npm:^1.0.0"
   bin:
-    svgo: ./bin/svgo
-  checksum: 10c0/28fa9061ccbcf2e3616d48d1feb613aaa05f8f290a329beb0e585914f1864385152934a7d4d683a4609fafbae3d51666633437c359c5c5ef74fb58ad09092a7c
+    svgo: ./bin/svgo.js
+  checksum: 10c0/96e74e0816eb39a0d221497320276a95a2dce1bc1bb4dcf0fe70791da8efa4c10bf168691c71210056250740ca8d2da0fbfe06125a69449642f287f7a2b1f160
   languageName: node
   linkType: hard
 
