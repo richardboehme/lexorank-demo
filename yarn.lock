@@ -1221,7 +1221,7 @@ __metadata:
     esbuild-plugin-clean: "npm:^1.0.1"
     esbuild-plugin-copy: "npm:^2.1.1"
     esbuild-plugin-stimulus: "npm:^0.1.5"
-    sass: "npm:^1.76.0"
+    sass: "npm:^1.77.2"
     sortablejs: "npm:^1.15.2"
     svgo: "npm:^3.2.0"
   languageName: unknown
@@ -1602,16 +1602,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.76.0":
-  version: 1.76.0
-  resolution: "sass@npm:1.76.0"
+"sass@npm:^1.77.2":
+  version: 1.77.2
+  resolution: "sass@npm:1.77.2"
   dependencies:
     chokidar: "npm:>=3.0.0 <4.0.0"
     immutable: "npm:^4.0.0"
     source-map-js: "npm:>=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: 10c0/976baf2c378e104f8d4ffca5375c8aa6f3d24f59d5c0a5db8d68a51f89edce45dedc25cfcd304b309fc8568d146de9e2c6cd189395e97bb2840d39feb13932ff
+  checksum: 10c0/0d292339064de3c902e209d41de9c4eb2038cff326476aeebbb5be3eee1d23400d975face2b8e124ae617b10af3e93bec01580f61912f34e4c517fe137a118b6
   languageName: node
   linkType: hard
 
