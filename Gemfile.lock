@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rubycdp/cuprite.git
-  revision: 9e2788fac70a9d250364ced47a50b77e18fe31a5
+  revision: b3b0d36665cd7abd6c57d292cd06264f8e958fd0
   branch: main
   specs:
     cuprite (0.15)
@@ -204,7 +204,7 @@ GEM
       pry (>= 0.10.4)
     psych (5.1.2)
       stringio
-    public_suffix (5.0.4)
+    public_suffix (5.0.5)
     puma (6.4.2)
       nio4r (~> 2.0)
     racc (1.7.3)
@@ -259,7 +259,7 @@ GEM
       redis-client (>= 0.22.0)
     redis-client (0.22.0)
       connection_pool
-    regexp_parser (2.9.0)
+    regexp_parser (2.9.2)
     reline (0.5.7)
       io-console (~> 0.5)
     rexml (3.2.8)
