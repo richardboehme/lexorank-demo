@@ -191,7 +191,7 @@ GEM
     parser (3.3.0.5)
       ast (~> 2.4.1)
       racc
-    propshaft (0.8.0)
+    propshaft (0.9.0)
       actionpack (>= 7.0.0)
       activesupport (>= 7.0.0)
       rack
@@ -207,7 +207,7 @@ GEM
     public_suffix (5.0.5)
     puma (6.4.2)
       nio4r (~> 2.0)
-    racc (1.7.3)
+    racc (1.8.0)
     rack (3.0.11)
     rack-attack (6.7.0)
       rack (>= 1.0, < 4)
