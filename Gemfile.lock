@@ -260,8 +260,8 @@ GEM
     regexp_parser (2.9.2)
     reline (0.5.8)
       io-console (~> 0.5)
-    rexml (3.2.8)
-      strscan (>= 3.0.9)
+    rexml (3.2.9)
+      strscan
     ruboconf (1.14.0)
       rubocop (~> 1.61.0)
       rubocop-performance (~> 1.20.0)
