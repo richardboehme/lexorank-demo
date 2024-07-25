@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rubycdp/cuprite.git
-  revision: 373b894d723bf9fb1afe31781963fe655a177218
+  revision: 503179f8f210c9d431f7f62bc20a68812cffd0e3
   branch: main
   specs:
     cuprite (0.15.1)
@@ -201,11 +201,11 @@ GEM
       pry (>= 0.13.0)
     psych (5.1.2)
       stringio
-    public_suffix (6.0.0)
+    public_suffix (6.0.1)
     puma (6.4.2)
       nio4r (~> 2.0)
     racc (1.8.0)
-    rack (3.1.6)
+    rack (3.1.7)
     rack-attack (6.7.0)
       rack (>= 1.0, < 4)
     rack-session (2.0.0)
