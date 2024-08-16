@@ -10,13 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_06_205707) do
-
+ActiveRecord::Schema[7.1].define(version: 2021_03_06_205707) do
   create_table "items", charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
     t.string "name"
     t.integer "list_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "rank"
     t.index ["list_id"], name: "index_items_on_list_id"
     t.index ["rank", "list_id"], name: "index_items_on_rank_and_list_id", unique: true
@@ -24,19 +23,19 @@ ActiveRecord::Schema.define(version: 2021_03_06_205707) do
 
   create_table "lists", charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "rank"
     t.bigint "session_id", null: false
     t.index ["rank", "session_id"], name: "index_lists_on_rank_and_session_id", unique: true
     t.index ["session_id"], name: "index_lists_on_session_id"
   end
 
-  create_table "sessions", charset: "utf8", force: :cascade do |t|
+  create_table "sessions", charset: "utf8mb3", collation: "utf8mb3_general_ci", force: :cascade do |t|
     t.string "session_id", null: false
     t.text "data"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["session_id"], name: "index_sessions_on_session_id", unique: true
     t.index ["updated_at"], name: "index_sessions_on_updated_at"
   end
