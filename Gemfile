@@ -25,7 +25,7 @@ gem 'slim-rails'
 
 gem 'activerecord-session_store', '~> 2.1.0'
 
-gem 'lexorank', '~> 0.2.0'
+gem 'lexorank', '~> 0.3.0'
 gem 'with_advisory_lock'
 
 gem 'rack-attack'
