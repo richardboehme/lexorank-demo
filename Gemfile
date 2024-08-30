@@ -65,6 +65,7 @@ end
 
 group :production do
   gem 'cloudflare-rails'
+  gem 'activerecord-nulldb-adapter' # used to precompile assets
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

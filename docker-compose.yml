@@ -8,6 +8,18 @@ services:
       - 3306:3306
     volumes:
       - data:/var/lib/mysql
+  app:
+    build:
+      context: "."
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+    environment: &app_env
+      RAILS_ENV: production
+      DATABASE_HOST: db
 
 volumes:
   data:
