@@ -190,7 +190,7 @@ GEM
     parser (3.3.3.0)
       ast (~> 2.4.1)
       racc
-    propshaft (0.9.1)
+    propshaft (1.0.0)
       actionpack (>= 7.0.0)
       activesupport (>= 7.0.0)
       rack
@@ -258,7 +258,7 @@ GEM
     redis-client (0.22.2)
       connection_pool
     regexp_parser (2.9.2)
-    reline (0.5.9)
+    reline (0.5.10)
       io-console (~> 0.5)
     rexml (3.3.7)
     ruboconf (1.14.0)
@@ -304,7 +304,7 @@ GEM
       slim (>= 3.0, < 6.0, != 5.0.0)
     stringio (3.1.1)
     temple (0.10.3)
-    thor (1.3.1)
+    thor (1.3.2)
     tilt (2.3.0)
     timeout (0.4.1)
     turbo-rails (2.0.6)
@@ -330,7 +330,7 @@ GEM
       zeitwerk (>= 2.6)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.6.17)
+    zeitwerk (2.6.18)
 
 PLATFORMS
   x86_64-linux
