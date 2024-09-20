@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build and start the DB
-        run: docker compose up -d db
+        run: docker compose up -d --wait db
       - uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
