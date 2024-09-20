@@ -8,6 +8,12 @@ services:
       - 3306:3306
     volumes:
       - data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      start_period: 10s
+      interval: 10s
+      timeout: 5s
+      retries: 3
   app:
     build:
       context: "."
