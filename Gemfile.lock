@@ -112,7 +112,7 @@ GEM
       xpath (~> 3.2)
     cgi (0.3.6)
     chronic (0.10.2)
-    cloudflare-rails (6.1.0)
+    cloudflare-rails (6.2.0)
       actionpack (>= 7.1.0, < 8.1.0)
       activesupport (>= 7.1.0, < 8.1.0)
       railties (>= 7.1.0, < 8.1.0)
