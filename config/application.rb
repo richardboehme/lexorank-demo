@@ -23,7 +23,7 @@ Bundler.require(*Rails.groups)
 module LexorankSampleApp
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 7.2
+    config.load_defaults 8.0
 
     config.session_store :active_record_store, key: 'lexorank_demo'
 
