@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'lexorank/rankable'
+require "lexorank/rankable"
 class List < ApplicationRecord
   has_many :items, dependent: :destroy
   belongs_to :session

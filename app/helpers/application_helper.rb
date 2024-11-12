@@ -17,7 +17,7 @@ module ApplicationHelper
   # We use our own implementation instead of link_to(method: :delete) to allow
   # to site to be used without any js
   def delete_button(url, form: {}, button: {}, &block)
-    form_with(**form.merge(url: url, method: :delete)) do |f|
+    form_with(**form, url: url, method: :delete) do |f|
       f.button button, &block
     end
   end
