@@ -13,5 +13,5 @@ Rails.application.routes.draw do
       patch :update_position
     end
   end
-  root to: 'lists#index'
+  root to: "lists#index"
 end

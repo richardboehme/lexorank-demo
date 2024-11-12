@@ -8,14 +8,14 @@ class ItemsController < ApplicationController
     @items = @list.items.ranked
     item.move_to(@items.count)
     if item.save
-      flash.now[:success] = [{ title: 'Item successfully created!' }]
+      flash.now[:success] = [{ title: "Item successfully created!" }]
     else
-      flash.now[:danger] = item.errors.full_messages.map { |messages| { title: 'Error while creating a new item!', message: messages } }
+      flash.now[:danger] = item.errors.full_messages.map { |messages| { title: "Error while creating a new item!", message: messages } }
     end
 
     respond_with_turbo_stream(fallback: list_path(@list)) do
       if item.persisted?
-        turbo_stream.append(:items, partial: 'items/item', locals: { item: item, item_counter: @items.count })
+        turbo_stream.append(:items, partial: "items/item", locals: { item: item, item_counter: @items.count })
       end
     end
   end

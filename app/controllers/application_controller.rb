@@ -19,9 +19,9 @@ class ApplicationController < ActionController::Base
     respond_to do |format|
       format.turbo_stream do
         streams =
-          (+'').tap do |out|
+          (+"").tap do |out|
             out << yield.to_s
-            out << turbo_stream.append(:flash_messages, partial: 'layouts/flash') unless flash.empty?
+            out << turbo_stream.append(:flash_messages, partial: "layouts/flash") unless flash.empty?
           end
         render turbo_stream: streams
       end
