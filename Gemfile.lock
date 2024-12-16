@@ -257,7 +257,7 @@ GEM
     regexp_parser (2.9.2)
     reline (0.5.11)
       io-console (~> 0.5)
-    rexml (3.3.9)
+    rexml (3.4.0)
     ruboconf (1.16.0)
       rubocop (~> 1.68.0)
       rubocop-performance (~> 1.22.0)
