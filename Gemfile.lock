@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rubycdp/cuprite.git
-  revision: 70768dbce11d69b4b345f14f4abcc6c4f2937ec1
+  revision: b4eeaf2e06ae6882e0e7b3046fb5ead39725c408
   branch: main
   specs:
     cuprite (0.15.1)
@@ -320,7 +320,8 @@ GEM
       bindex (>= 0.4.0)
       railties (>= 6.0.0)
     webrick (1.9.1)
-    websocket-driver (0.7.6)
+    websocket-driver (0.7.7)
+      base64
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
     whenever (1.0.0)
