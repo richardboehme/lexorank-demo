@@ -1393,7 +1393,7 @@ __metadata:
     esbuild-plugin-clean: "npm:^1.0.1"
     esbuild-plugin-copy: "npm:^2.1.1"
     esbuild-plugin-stimulus: "npm:^0.1.5"
-    sass: "npm:^1.83.3"
+    sass: "npm:^1.83.4"
     sortablejs: "npm:^1.15.6"
     svgo: "npm:^3.3.2"
   languageName: unknown
@@ -1790,9 +1790,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.83.3":
-  version: 1.83.3
-  resolution: "sass@npm:1.83.3"
+"sass@npm:^1.83.4":
+  version: 1.83.4
+  resolution: "sass@npm:1.83.4"
   dependencies:
     "@parcel/watcher": "npm:^2.4.1"
     chokidar: "npm:^4.0.0"
@@ -1803,7 +1803,7 @@ __metadata:
       optional: true
   bin:
     sass: sass.js
-  checksum: 10c0/36f98f64c217dce17030b4c0cc9917ca16edb03f430cf2d56ff8d27224198a608d15316aee76fc24d19418751043c2625447e9afc930be4e422cceccf6a099fa
+  checksum: 10c0/6f27f0eebfeb50222b14baaeef548ef58a05daf8abd9797e6c499334ed7ad40541767056c8693780d06ca83d8836348ea7396a923d3be439b133507993ca78be
   languageName: node
   linkType: hard
 
