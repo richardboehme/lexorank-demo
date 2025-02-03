@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rubycdp/cuprite.git
-  revision: b4eeaf2e06ae6882e0e7b3046fb5ead39725c408
+  revision: 04becb9416290535e454df514087269d9bd8d96f
   branch: main
   specs:
     cuprite (0.15.1)
@@ -183,7 +183,7 @@ GEM
     net-smtp (0.5.0)
       net-protocol
     nio4r (2.7.4)
-    nokogiri (1.18.1-x86_64-linux-gnu)
+    nokogiri (1.18.2-x86_64-linux-gnu)
       racc (~> 1.4)
     parallel (1.26.3)
     parser (3.3.7.0)
@@ -207,7 +207,7 @@ GEM
     puma (6.6.0)
       nio4r (~> 2.0)
     racc (1.8.1)
-    rack (3.1.8)
+    rack (3.1.9)
     rack-attack (6.7.0)
       rack (>= 1.0, < 4)
     rack-session (2.0.0)
