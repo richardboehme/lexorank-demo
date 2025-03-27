@@ -23,7 +23,7 @@ gem "turbo-rails"
 
 gem "slim-rails"
 
-gem "activerecord-session_store", "~> 2.1.0"
+gem "activerecord-session_store", "~> 2.2.0"
 
 gem "lexorank", "~> 0.4.0"
 gem "with_advisory_lock"
