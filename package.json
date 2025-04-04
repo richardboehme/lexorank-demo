@@ -7,7 +7,7 @@
     "@popperjs/core": "^2.11.8",
     "@rails/actioncable": "^8.0.200",
     "@rails/ujs": "7.1.501",
-    "bootstrap": "^5.3.3",
+    "bootstrap": "^5.3.4",
     "bootstrap-icons": "^1.11.3",
     "esbuild": "^0.25.2",
     "sass": "^1.86.3",
