@@ -537,10 +537,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bootstrap-icons@npm:^1.11.3":
-  version: 1.11.3
-  resolution: "bootstrap-icons@npm:1.11.3"
-  checksum: 10c0/37eefd418c6bbbb304bdff0f2ed527f82c3c6f331d3e3a7c4aa8bbdbaf7118bb86725b024f85e7d738c613d48c7353cd81c09e58e9d8d34c5633960fdec8410b
+"bootstrap-icons@npm:^1.12.1":
+  version: 1.12.1
+  resolution: "bootstrap-icons@npm:1.12.1"
+  checksum: 10c0/73b3e40e3a3cac65627fd119044cf9b9ecebb5c74386b13cdd5a45f5c0f13f641fb92524d0c37c396e28129a6669147d0abfda483969972667a9797b27d74b43
   languageName: node
   linkType: hard
 
@@ -1388,7 +1388,7 @@ __metadata:
     "@rails/actioncable": "npm:^8.0.200"
     "@rails/ujs": "npm:7.1.501"
     bootstrap: "npm:^5.3.6"
-    bootstrap-icons: "npm:^1.11.3"
+    bootstrap-icons: "npm:^1.12.1"
     esbuild: "npm:^0.25.4"
     esbuild-plugin-clean: "npm:^1.0.1"
     esbuild-plugin-copy: "npm:^2.1.1"
