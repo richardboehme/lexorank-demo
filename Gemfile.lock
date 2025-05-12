@@ -1,11 +1,11 @@
 GIT
   remote: https://github.com/rubycdp/cuprite.git
-  revision: 4fa812640823e160cb359f40291fe8cf88e05cca
+  revision: bc06cc0600e68d4a90c94b3cbd26665e1dd694e2
   branch: main
   specs:
-    cuprite (0.15.1)
+    cuprite (0.17)
       capybara (~> 3.0)
-      ferrum (~> 0.16.0)
+      ferrum (~> 0.17.0)
 
 GEM
   remote: https://rubygems.org/
@@ -127,7 +127,7 @@ GEM
     date (3.4.1)
     drb (2.2.1)
     erubi (1.13.1)
-    ferrum (0.16)
+    ferrum (0.17.1)
       addressable (~> 2.5)
       base64 (~> 0.2)
       concurrent-ruby (~> 1.1)
@@ -205,7 +205,7 @@ GEM
     psych (5.2.3)
       date
       stringio
-    public_suffix (6.0.1)
+    public_suffix (6.0.2)
     puma (6.6.0)
       nio4r (~> 2.0)
     racc (1.8.1)
