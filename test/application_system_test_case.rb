@@ -8,9 +8,7 @@ class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
     !ENV["NOJS"]
   end
 
-  def js?
-    self.class.js?
-  end
+  delegate :js?, to: :class
 
   driver = js? ? :cuprite : :rack_test
   driven_by(
