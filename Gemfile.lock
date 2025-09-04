@@ -208,7 +208,7 @@ GEM
       date
       stringio
     public_suffix (6.0.2)
-    puma (6.6.1)
+    puma (7.0.0)
       nio4r (~> 2.0)
     racc (1.8.1)
     rack (3.2.0)
@@ -366,7 +366,7 @@ DEPENDENCIES
   propshaft
   prosopite
   pry-rails
-  puma (~> 6.6)
+  puma (~> 7.0)
   rack-attack
   rails (~> 8.0.2)
   redis (~> 5.4)
