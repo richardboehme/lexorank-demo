@@ -11,7 +11,7 @@
     "bootstrap-icons": "^1.13.1",
     "esbuild": "^0.27.3",
     "sass": "^1.97.3",
-    "sortablejs": "^1.15.6",
+    "sortablejs": "^1.15.7",
     "svgo": "^4.0.0"
   },
   "version": "0.1.0",
