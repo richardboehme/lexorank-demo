@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rubycdp/cuprite.git
-  revision: bc06cc0600e68d4a90c94b3cbd26665e1dd694e2
+  revision: 609706a23e64e182988b283343c2afe4bcd2dda4
   branch: main
   specs:
     cuprite (0.17)
@@ -89,8 +89,8 @@ GEM
       securerandom (>= 0.3)
       tzinfo (~> 2.0, >= 2.0.5)
       uri (>= 0.13.1)
-    addressable (2.8.7)
-      public_suffix (>= 2.0.2, < 7.0)
+    addressable (2.8.9)
+      public_suffix (>= 2.0.2, < 8.0)
     ast (2.4.3)
     base64 (0.3.0)
     benchmark (0.5.0)
@@ -120,7 +120,7 @@ GEM
       railties (>= 7.2.0, < 8.2.0)
       zeitwerk (>= 2.5.0)
     coderay (1.1.3)
-    concurrent-ruby (1.3.5)
+    concurrent-ruby (1.3.6)
     connection_pool (2.5.5)
     crass (1.0.6)
     cssbundling-rails (1.4.3)
@@ -129,7 +129,7 @@ GEM
     drb (2.2.3)
     erb (5.1.3)
     erubi (1.13.1)
-    ferrum (0.17.1)
+    ferrum (0.17.2)
       addressable (~> 2.5)
       base64 (~> 0.2)
       concurrent-ruby (~> 1.1)
@@ -171,7 +171,7 @@ GEM
       net-pop
       net-smtp
     marcel (1.1.0)
-    matrix (0.4.2)
+    matrix (0.4.3)
     method_source (1.1.0)
     mini_mime (1.1.5)
     minitest (5.26.2)
@@ -188,7 +188,7 @@ GEM
     net-smtp (0.5.1)
       net-protocol
     nio4r (2.7.5)
-    nokogiri (1.19.1-x86_64-linux-gnu)
+    nokogiri (1.19.2-x86_64-linux-gnu)
       racc (~> 1.4)
     parallel (1.27.0)
     parser (3.3.8.0)
@@ -211,7 +211,7 @@ GEM
     psych (5.2.6)
       date
       stringio
-    public_suffix (6.0.2)
+    public_suffix (7.0.5)
     puma (7.2.0)
       nio4r (~> 2.0)
     racc (1.8.1)
@@ -268,7 +268,7 @@ GEM
       redis-client (>= 0.22.0)
     redis-client (0.25.1)
       connection_pool
-    regexp_parser (2.10.0)
+    regexp_parser (2.11.3)
     reline (0.6.2)
       io-console (~> 0.5)
     rexml (3.4.4)
@@ -338,7 +338,7 @@ GEM
       activemodel (>= 6.0.0)
       bindex (>= 0.4.0)
       railties (>= 6.0.0)
-    webrick (1.9.1)
+    webrick (1.9.2)
     websocket-driver (0.8.0)
       base64
       websocket-extensions (>= 0.1.0)
