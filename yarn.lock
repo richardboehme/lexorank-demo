@@ -429,10 +429,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rails/actioncable@npm:^8.1.100":
-  version: 8.1.100
-  resolution: "@rails/actioncable@npm:8.1.100"
-  checksum: 10c0/a9c1f1b62bf3d73408997036f92b9264b33fc6211f7fcfb79d8e2421dc277f80182df835a9525f1f77ed2043da8ea2af345fb428fa0f3fe7b52da12c9600b35d
+"@rails/actioncable@npm:^8.1.300":
+  version: 8.1.300
+  resolution: "@rails/actioncable@npm:8.1.300"
+  checksum: 10c0/144e6cc6d83e5bc56287ecd3c989c494915f0bf8593eedf7cbf4c10741fa2a1f75e4bcf7963b3e14114a70563a1dd64272580f81ed707b5fbb7e3734a3f3a6a8
   languageName: node
   linkType: hard
 
@@ -1388,7 +1388,7 @@ __metadata:
     "@hotwired/stimulus": "npm:^3.2.2"
     "@hotwired/turbo-rails": "npm:^8.0.22"
     "@popperjs/core": "npm:^2.11.8"
-    "@rails/actioncable": "npm:^8.1.100"
+    "@rails/actioncable": "npm:^8.1.300"
     "@rails/ujs": "npm:7.1.600"
     bootstrap: "npm:^5.3.8"
     bootstrap-icons: "npm:^1.13.1"
