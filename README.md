@@ -10,7 +10,7 @@ You can visit the live demo [here](https://lexorank.richardboeh.me).
 
 Install dependencies:
 
-- Ruby Version: 3.3.0
+- Ruby Version: 4.0.2
 - Yarn (installable using `corepack install`)
 - `libmysql-dev`
 
