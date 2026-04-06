@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   before_action :set_session
   before_action :set_lists
 
-  unless Rails.env.production?
+  if Rails.env.local? # rubocop:disable Rails/Env
     before_action do
       Prosopite.scan
     end
