@@ -36,7 +36,7 @@ gem "propshaft"
 
 gem "inline_svg"
 
-gem "minitest", "< 6"
+gem "minitest", "< 7"
 
 gem "whenever", require: false
 
