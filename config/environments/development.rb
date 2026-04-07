@@ -25,9 +25,7 @@ Rails.application.configure do
     config.action_controller.perform_caching = true
     config.action_controller.enable_fragment_cache_logging = true
 
-    config.public_file_server.headers = {
-      "Cache-Control" => "public, max-age=#{2.days.to_i}"
-    }
+    config.public_file_server.headers = { "cache-control" => "public, max-age=#{2.days.to_i}" }
   else
     config.action_controller.perform_caching = false
   end
@@ -49,6 +47,12 @@ Rails.application.configure do
 
   # Append comments with runtime information tags to SQL queries in logs.
   config.active_record.query_log_tags_enabled = true
+
+  # Highlight code that triggered redirect in logs.
+  config.action_dispatch.verbose_redirect_logs = true
+
+  # Suppress logger output for asset requests.
+  config.assets.quiet = true
 
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true

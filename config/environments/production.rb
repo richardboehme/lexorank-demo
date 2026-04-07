@@ -33,13 +33,12 @@ Rails.application.configure do
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   config.force_ssl = true
 
-  # Log to production.lg
-  config.logger = ActiveSupport::Logger.new($stdout).
-    tap  { |logger| logger.formatter = Logger::Formatter.new }.
-    then { |logger| ActiveSupport::TaggedLogging.new(logger) }
+  # Skip http-to-https redirect for the default health check endpoint.
+  # config.ssl_options = { redirect: { exclude: ->(request) { request.path == "/up" } } }
 
-  # Prepend all log lines with the following tags.
+  # Log to STDOUT with the current request id as a default log tag.
   config.log_tags = [:request_id]
+  config.logger   = ActiveSupport::TaggedLogging.logger($stdout)
 
   # "info" includes generic and useful information about system operation, but avoids logging too much
   # information to avoid inadvertent exposure of personally identifiable information (PII). If you
