@@ -10,7 +10,7 @@ gem "rails", "~> 8.1.3"
 # Use mysql as the database for Active Record
 gem "mysql2"
 # Use Puma as the app server
-gem "puma", "~> 7.2"
+gem "puma", "~> 8.0"
 # Use Redis adapter to run Action Cable in production
 gem "redis", "~> 5.4"
 # Use Active Model has_secure_password
