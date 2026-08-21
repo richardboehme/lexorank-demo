@@ -1,11 +1,11 @@
 GIT
   remote: https://github.com/rubycdp/cuprite.git
-  revision: fa14cec88229ede35d9ade3a5fee6a20bc67c60e
+  revision: bd82f7c3d08178504af2585a33d0685591241a71
   branch: main
   specs:
     cuprite (0.17)
       capybara (~> 3.0)
-      ferrum (~> 0.17.0)
+      ferrum (~> 0.18.0)
 
 GEM
   remote: https://rubygems.org/
@@ -131,11 +131,10 @@ GEM
     drb (2.2.3)
     erb (6.0.6)
     erubi (1.13.1)
-    ferrum (0.17.2)
+    ferrum (0.18.0)
       addressable (~> 2.5)
       base64 (~> 0.2)
       concurrent-ruby (~> 1.1)
-      webrick (~> 1.7)
       websocket-driver (~> 0.7)
     ffi (1.17.3-x86_64-linux-gnu)
     globalid (1.4.0)
@@ -344,7 +343,6 @@ GEM
       actionview (>= 8.0.0)
       bindex (>= 0.4.0)
       railties (>= 8.0.0)
-    webrick (1.9.2)
     websocket-driver (0.8.2)
       base64
       websocket-extensions (>= 0.1.0)
