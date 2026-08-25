@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rubycdp/cuprite.git
-  revision: a1e9fc9d9b4f409c11e8cf567b5ca07e13dd3620
+  revision: 171c42c5c098da2d535d07be9b4d9af9e028aeb8
   branch: main
   specs:
     cuprite (0.17)
