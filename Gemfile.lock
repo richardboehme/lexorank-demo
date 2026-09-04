@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/rubycdp/cuprite.git
-  revision: 8677fe15c96642a87c3b29580f29246ac56a3445
+  revision: ffdc57d8af365ff2044633f364cc3d9912ca09f9
   branch: main
   specs:
-    cuprite (0.17)
+    cuprite (0.18)
       capybara (~> 3.0)
       ferrum (~> 0.18.0)
 
