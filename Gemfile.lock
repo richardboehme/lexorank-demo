@@ -1,11 +1,11 @@
 GIT
   remote: https://github.com/rubycdp/cuprite.git
-  revision: 7059511d5ec4562c60b81b741e5704b8858a758d
+  revision: 60478fae6c39def7a83c6d86f10373ef063013b7
   branch: main
   specs:
-    cuprite (0.18)
+    cuprite (0.19)
       capybara (~> 3.0)
-      ferrum (~> 0.19.0)
+      ferrum (~> 0.19.1)
 
 GEM
   remote: https://rubygems.org/
@@ -131,7 +131,7 @@ GEM
     drb (2.2.3)
     erb (6.0.7)
     erubi (1.13.1)
-    ferrum (0.19.0)
+    ferrum (0.19.1)
       addressable (~> 2.5)
       base64 (~> 0.2)
       concurrent-ruby (~> 1.1)
