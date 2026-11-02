@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/rubycdp/cuprite.git
-  revision: 76298084d98af1b08291f32fe449f50f36abf813
+  revision: baff7af4050b37991d643e823465609d247f13d7
   branch: main
   specs:
-    cuprite (0.19)
+    cuprite (0.20)
       capybara (~> 3.0)
       ferrum (~> 0.20.1)
 
@@ -92,7 +92,7 @@ GEM
       securerandom (>= 0.3)
       tzinfo (~> 2.0, >= 2.0.5)
       uri (>= 0.13.1)
-    addressable (2.9.0)
+    addressable (2.9.2)
       public_suffix (>= 2.0.2, < 8.0)
     ast (2.4.3)
     base64 (0.3.0)
@@ -192,7 +192,7 @@ GEM
     net-smtp (0.5.1)
       net-protocol
     nio4r (2.7.5)
-    nokogiri (1.19.4-x86_64-linux-gnu)
+    nokogiri (1.19.5-x86_64-linux-gnu)
       racc (~> 1.4)
     parallel (1.28.0)
     parser (3.3.11.1)
