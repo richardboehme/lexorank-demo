@@ -273,9 +273,9 @@ GEM
       prism (>= 1.6.0)
       rbs (>= 4.0.0)
       tsort
-    redis (6.0.0)
-      redis-client (= 0.30.1)
-    redis-client (0.30.1)
+    redis (6.1.0)
+      redis-client (= 0.31.0)
+    redis-client (0.31.0)
       connection_pool
     regexp_parser (2.13.4)
     reline (0.7.0)
@@ -384,7 +384,7 @@ DEPENDENCIES
   puma (~> 8.1)
   rack-attack
   rails (~> 8.1.4)
-  redis (~> 6.0)
+  redis (~> 6.1)
   rexml
   ruboconf-rails (~> 1.21.0)
   shoulda
